@@ -12,16 +12,21 @@
 ##
 # XCode bullshit
 
-#*.swp
-#*~.nib
-build/*
-#*.pbxuser
-#*.perspective
-#*.perspectivev3
-#*.mode1v3
+build
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+# Is this possible?
+!default.mode1v3
+# *.perspective
+# *.perspectivev3
+# *.swp
+# *~.nib
 
 ##
 # Mac OS X bullshit
 
-#profile # WTF is this?
-#.DS_Store # this should really be in the global git ignores, not the project.
+# WTF is this?
+# profile
+# This should really be in the global git ignores, not the project.
+# .DS_Store
