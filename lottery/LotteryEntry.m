@@ -10,6 +10,7 @@
   if (![super init])
     return nil;
   
+  [theDate setCalendarFormat:@"%Y-%m-%d@%H:%M:%S"];
   entryDate = theDate;
   firstNumber = random() % 100 + 1;
   secondNumber = random() % 100 + 1;
