@@ -3,7 +3,7 @@
 @implementation LotteryEntry
 
 - (id)init {
-  if ([super init])
+  if (![super init])
     return nil;
   
   firstNumber = (random() % 100) + 1;
