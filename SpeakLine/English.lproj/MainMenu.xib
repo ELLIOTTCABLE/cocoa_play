@@ -1134,7 +1134,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="1044928819">
 								<int key="NSCellFlags">-1804468671</int>
 								<int key="NSCellFlags2">272630784</int>
-								<string key="NSContents"/>
+								<string key="NSContents">Mrs. Robinson, this is Dr. Pepper.</string>
 								<object class="NSFont" key="NSSupport" id="411780086">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">1.300000e+01</double>
