@@ -14,10 +14,12 @@
 
 build
 *.pbxuser
-!default.pbxuser
 *.mode1v3
-# Is this possible?
+*.mode2v3
+!default.pbxuser
+# Are these possible?
 !default.mode1v3
+!default.mode2v3
 # *.perspective
 # *.perspectivev3
 # *.swp
