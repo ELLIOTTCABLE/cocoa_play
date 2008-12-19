@@ -18,6 +18,12 @@
   return self;
 }
 
+- (void)dealloc {
+  NSLog(@"De-allocating %@", self);
+  [entryDate release];
+  [super dealloc];
+}
+
 - (void)setEntryDate:(NSCalendarDate *)date {
   entryDate = date;
 }
