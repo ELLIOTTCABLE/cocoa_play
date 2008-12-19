@@ -5,6 +5,7 @@
   int firstNumber;
   int secondNumber;
 }
+- (id)initWithEntryDate:(NSCalendarDate *)theDate;
 - (void)setEntryDate:(NSCalendarDate *)date;
 - (NSCalendarDate *)entryDate;
 - (int)firstNumber;

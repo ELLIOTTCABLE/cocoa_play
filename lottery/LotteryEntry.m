@@ -3,11 +3,16 @@
 @implementation LotteryEntry
 
 - (id)init {
+  return [self initWithEntryDate:[NSCalendarDate calendarDate]];
+}
+
+- (id)initWithEntryDate:(NSCalendarDate *)theDate {
   if (![super init])
     return nil;
   
-  firstNumber = (random() % 100) + 1;
-  secondNumber = (random() % 100) + 1;
+  entryDate = theDate;
+  firstNumber = random() % 100 + 1;
+  secondNumber = random() % 100 + 1;
   
   return self;
 }
