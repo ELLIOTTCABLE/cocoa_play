@@ -2,9 +2,14 @@
 
 @implementation LotteryEntry
 
-- (void)prepareRandomNumbers {
+- (id)init {
+  if ([super init])
+    return nil;
+  
   firstNumber = (random() % 100) + 1;
   secondNumber = (random() % 100) + 1;
+  
+  return self;
 }
 
 - (void)setEntryDate:(NSCalendarDate *)date {
