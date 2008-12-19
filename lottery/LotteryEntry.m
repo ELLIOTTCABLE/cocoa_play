@@ -11,7 +11,7 @@
     return nil;
   
   [theDate setCalendarFormat:@"%Y-%m-%d@%H:%M:%S"];
-  entryDate = theDate;
+  entryDate = [theDate retain];
   firstNumber = random() % 100 + 1;
   secondNumber = random() % 100 + 1;
   
