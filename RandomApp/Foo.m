@@ -10,6 +10,12 @@
 
 @implementation Foo
 
+- (void)awakeFromNib {
+  NSCalendarDate *now;
+  now = [NSCalendarDate calendarDate];
+  [textField setObjectValue:now];
+}
+
 - (IBAction)generate:(id)sender {
   // Generate a number between 1 and 100 (inclusive)
   int generated;
