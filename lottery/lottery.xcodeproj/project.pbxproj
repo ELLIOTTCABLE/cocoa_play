@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51E5EDC70EFB8824009990DA /* LotteryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E5EDC60EFB8824009990DA /* LotteryEntry.m */; };
 		8DD76F9A0486AA7600D96B5E /* lottery.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* lottery.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9F0486AA7600D96B5E /* lottery.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* lottery.1 */; };
@@ -29,6 +30,8 @@
 		08FB7796FE84155DC02AAC07 /* lottery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lottery.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* lottery_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lottery_Prefix.pch; sourceTree = "<group>"; };
+		51E5EDC50EFB8824009990DA /* LotteryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryEntry.h; sourceTree = "<group>"; };
+		51E5EDC60EFB8824009990DA /* LotteryEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryEntry.m; sourceTree = "<group>"; };
 		8DD76FA10486AA7600D96B5E /* lottery */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lottery; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859EA3029092ED04C91782 /* lottery.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = lottery.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +62,8 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				51E5EDC50EFB8824009990DA /* LotteryEntry.h */,
+				51E5EDC60EFB8824009990DA /* LotteryEntry.m */,
 				32A70AAB03705E1F00C91783 /* lottery_Prefix.pch */,
 				08FB7796FE84155DC02AAC07 /* lottery.m */,
 			);
@@ -133,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD76F9A0486AA7600D96B5E /* lottery.m in Sources */,
+				51E5EDC70EFB8824009990DA /* LotteryEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
