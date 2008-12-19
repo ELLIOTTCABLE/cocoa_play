@@ -44,8 +44,8 @@
 
 - (NSString *)description {
   return [NSString stringWithFormat:@"%@ = %d and %d",
-          [entryDate descriptionWithCalendarFormat:@"%b %d %Y"],
-          firstNumber, secondNumber];
+          [[self entryDate] descriptionWithCalendarFormat:@"%b %d %Y"],
+          [self firstNumber], [self secondNumber]];
 }
 
 @end
