@@ -6,29 +6,19 @@
 #     http://shanesbrain.net/2008/7/9/using-xcode-with-git
 #     http://www.bluishcoder.co.nz/2007/09/git-binary-files-and-cherry-picking.html
 #     
-# I'll gradually remove/uncomment entries as I figure out what they do and
-# whether or not I actually want them ignored.
-
-##
-# XCode bullshit
 
 build
+
 *.pbxuser
 *.mode1v3
 *.mode2v3
 !default.pbxuser
-# Are these possible?
 !default.mode1v3
 !default.mode2v3
-# *.perspective
-# *.perspectivev3
-# *.swp
-# *~.nib
 
-##
-# Mac OS X bullshit
+*.perspective
+*.perspectivev3
 
-# WTF is this?
-# profile
-# This should really be in the global git ignores, not the project.
-# .DS_Store
+*.swp
+*~.nib
+*~.xib
