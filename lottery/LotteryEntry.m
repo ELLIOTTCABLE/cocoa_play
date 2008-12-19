@@ -41,7 +41,7 @@
 }
 
 - (NSString *)description {
-  return [[NSString alloc] initWithFormat:@"%@ = %d and %d",
+  return [NSString stringWithFormat:@"%@ = %d and %d",
           [entryDate descriptionWithCalendarFormat:@"%b %d %Y"],
           firstNumber, secondNumber];
 }
