@@ -26,12 +26,14 @@ int main (int argc, const char *argv[]) {
     // Add the LotteryEntry object to the array
     [array addObject:newEntry];
   }
+  [now release];
   now = nil;
   
   for (LotteryEntry *entryToPrint in array) {
     // Display its contents
     NSLog(@"%@", entryToPrint);
   }
+  [array release];
   array = nil;
   
   [pool drain];
