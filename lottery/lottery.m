@@ -25,6 +25,7 @@ int main (int argc, const char *argv[]) {
     LotteryEntry *newEntry = [[LotteryEntry alloc] initWithEntryDate:iWeeksFromNow];
     // Add the LotteryEntry object to the array
     [array addObject:newEntry];
+    [newEntry release];
   }
   [now release];
   now = nil;
