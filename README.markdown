@@ -3,3 +3,14 @@ Cocoa Play
 Fuck if I know. Just following the <a title="Cocoa Programming for Mac OS X — Aaron Hillegass" href="http://bignerdranch.com/products.shtml">Hillegass book</a>.
 Or rather, trying to. Cocoa and Objective-C are really hard for me, for
 whatever reason.
+
+Interface Builder note
+----------------------
+It's worth noting that, due to my obsession with git, I'm manually policing
+every change that Interface Builder makes to the XIB files in this repository,
+so they aren't as trashy as most Cocoa project's diffs are. If you're like me,
+and always ignore changes to those files in most repositories when browsing
+commit histories, *please* don't ignore such changes here. I'm going to a lot
+of work to make them human-readable and clean, so please go peruse them! Maybe
+you will learn something about the structure of XIB files through doing so
+(though I doubt it'll be as much as I've learned through said hand-editing!)
