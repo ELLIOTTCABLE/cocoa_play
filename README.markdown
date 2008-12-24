@@ -14,3 +14,11 @@ commit histories, *please* don't ignore such changes here. I'm going to a lot
 of work to make them human-readable and clean, so please go peruse them! Maybe
 you will learn something about the structure of XIB files through doing so
 (though I doubt it'll be as much as I've learned through said hand-editing!)
+
+On a related note, I occasionally make *extremely* granular commit streams to
+this repository, going through a save/police/interactive-stage/commit process
+after I drag any item, change any attribute, or do anything else, in the
+Interface Builder. If you're following this repository, that may get annoying — I
+apologize, but it's necessary for me to be able to break down exactly what
+Interface Builder is doing in the future when I come back to learn from this
+repository.
