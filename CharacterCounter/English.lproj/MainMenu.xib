@@ -1171,7 +1171,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="804281875">
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">272630784</int>
-								<string key="NSContents">Label</string>
+								<string key="NSContents">Chars</string>
 								<reference key="NSSupport" ref="109124114"/>
 								<reference key="NSControlView" ref="360810667"/>
 								<object class="NSColor" key="NSBackgroundColor">
