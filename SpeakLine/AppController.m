@@ -22,6 +22,12 @@
   [tableView scrollRowToVisible:defaultRow];
 }
 
+// Overriding this, just so we can see when things try to delegate to us
+- (BOOL)respondsToSelector:(SEL)aSelector {
+  NSLog(@"respondsToSelector:%@", NSStringFromSelector(aSelector));
+  return [super respondsToSelector:aSelector];
+}
+
 - (void)speechSynthesizer:(NSSpeechSynthesizer *)sender
         didFinishSpeaking:(BOOL)complete {
   NSLog(@"complete = %d", complete);
