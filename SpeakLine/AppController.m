@@ -18,6 +18,9 @@
 - (void)speechSynthesizer:(NSSpeechSynthesizer *)sender
         didFinishSpeaking:(BOOL)complete {
   NSLog(@"complete = %d", complete);
+  
+  [stopButton setEnabled:NO];
+  [startButton setEnabled:YES];
 }
 
 - (IBAction)sayIt:(id)sender {
@@ -29,6 +32,9 @@
   }
   [speechSynth startSpeakingString:string];
   NSLog(@"Have started to say: %@", string);
+  
+  [stopButton setEnabled:YES];
+  [startButton setEnabled:NO];
 }
 
 - (IBAction)stopIt:(id)sender {
