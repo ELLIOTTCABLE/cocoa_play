@@ -16,6 +16,12 @@
   return self;
 }
 
+- (void)awakeFromNib {
+  int defaultRow = [voiceList indexOfObject:[NSSpeechSynthesizer defaultVoice]];
+  [tableView selectRow:defaultRow byExtendingSelection:NO];
+  [tableView scrollRowToVisible:defaultRow];
+}
+
 - (void)speechSynthesizer:(NSSpeechSynthesizer *)sender
         didFinishSpeaking:(BOOL)complete {
   NSLog(@"complete = %d", complete);
