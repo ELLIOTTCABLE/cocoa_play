@@ -3,7 +3,10 @@
 @interface AppController : NSObject {
   IBOutlet NSButton *stopButton;
   IBOutlet NSButton *startButton;
+  
   IBOutlet NSTextField *textField;
+  IBOutlet NSTableView *tableView;
+  NSArray *voiceList;
   NSSpeechSynthesizer *speechSynth;
 }
 
