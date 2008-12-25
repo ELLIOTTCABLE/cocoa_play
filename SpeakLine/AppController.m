@@ -43,4 +43,14 @@
   [speechSynth stopSpeaking];
 }
 
+- (int)numberOfRowsInTableView:(NSTableView *)tv {
+  return [voiceList count];
+}
+
+- (id)          tableView:(NSTableView *)tv
+objectValueForTableColumn:(NSTableColumn *)tableColumn
+                      row:(int)row {
+  return [[NSSpeechSynthesizer attributesForVoice:[voiceList objectAtIndex:row]] objectForKey:NSVoiceName];
+}
+
 @end
