@@ -22,6 +22,7 @@
   
   [stopButton setEnabled:NO];
   [startButton setEnabled:YES];
+  [tableView setEnabled:YES];
 }
 
 - (IBAction)sayIt:(id)sender {
@@ -36,6 +37,7 @@
   
   [stopButton setEnabled:YES];
   [startButton setEnabled:NO];
+  [tableView setEnabled:NO];
 }
 
 - (IBAction)stopIt:(id)sender {
