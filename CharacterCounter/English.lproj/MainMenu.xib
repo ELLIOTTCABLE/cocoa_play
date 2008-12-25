@@ -1128,7 +1128,7 @@
 						<object class="NSTextField" id="532950027">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">266</int>
-							<string key="NSFrame">{{52, 318}, {282, 22}}</string>
+							<string key="NSFrame">{{52, 318}, {348, 22}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="1021165721">
@@ -1200,13 +1200,13 @@
 						<object class="NSButton" id="896828068">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{342, 316}, {118, 25}}</string>
+							<string key="NSFrame">{{408, 316}, {52, 25}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="492080196">
 								<int key="NSCellFlags">-2080244224</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Round Textured</string>
+								<string key="NSContents">Count</string>
 								<reference key="NSSupport" ref="185248941"/>
 								<reference key="NSControlView" ref="896828068"/>
 								<int key="NSButtonFlags">-2038152961</int>
