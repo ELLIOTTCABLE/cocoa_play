@@ -3,7 +3,7 @@
 @implementation AppController
 
 - (void)awakeFromNib {
-  [numChars setIntValue:0];
+  [self countChars:nil];
 }
 
 - (IBAction)countChars:(id)sender {
