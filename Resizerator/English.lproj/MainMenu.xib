@@ -1132,7 +1132,7 @@
 			<object class="NSCustomObject" id="755631768">
 				<string key="NSClassName">NSFontManager</string>
 			</object>
-			<object class="NSCustomObject" id="891466900">
+			<object class="NSCustomObject" id="82591369">
 				<string key="NSClassName">AppController</string>
 			</object>
 		</object>
@@ -1666,6 +1666,14 @@
 						<reference key="destination" ref="632727374"/>
 					</object>
 					<int key="connectionID">449</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="972006081"/>
+						<reference key="destination" ref="82591369"/>
+					</object>
+					<int key="connectionID">451</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2565,7 +2573,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">450</int>
-						<reference key="object" ref="891466900"/>
+						<reference key="object" ref="82591369"/>
 						<reference key="parent" ref="1049"/>
 					</object>
 				</object>
@@ -3043,7 +3051,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">450</int>
+			<int key="maxID">451</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
