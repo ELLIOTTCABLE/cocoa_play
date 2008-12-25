@@ -7,7 +7,7 @@
 }
 
 - (IBAction)countChars:(id)sender {
-  
+  [numChars setIntValue:[[textField stringValue] length]];
 }
 
 @end
