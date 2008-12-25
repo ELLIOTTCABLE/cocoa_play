@@ -10,7 +10,14 @@
   
   // Create a new instance of NSSpeechSynthesizer with the default voice.
   speechSynth = [[NSSpeechSynthesizer alloc] initWithVoice:nil];
+  [speechSynth setDelegate:self];
+  
   return self;
+}
+
+- (void)speechSynthesizer:(NSSpeechSynthesizer *)sender
+        didFinishSpeaking:(BOOL)complete {
+  NSLog(@"complete = %d", complete);
 }
 
 - (IBAction)sayIt:(id)sender {
