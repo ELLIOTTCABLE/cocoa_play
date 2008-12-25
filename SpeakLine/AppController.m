@@ -11,6 +11,7 @@
   // Create a new instance of NSSpeechSynthesizer with the default voice.
   speechSynth = [[NSSpeechSynthesizer alloc] initWithVoice:nil];
   [speechSynth setDelegate:self];
+  voiceList = [[NSSpeechSynthesizer availableVoices] retain];
   
   return self;
 }
