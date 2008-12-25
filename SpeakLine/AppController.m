@@ -53,4 +53,12 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
   return [[NSSpeechSynthesizer attributesForVoice:[voiceList objectAtIndex:row]] objectForKey:NSVoiceName];
 }
 
+- (void)tableViewSelectionDidChange:(NSNotification *)notification {
+  int row = [tableView selectedRow];
+  if (row == -1) {
+    return;
+  }
+  [speechSynth setVoice:[voiceList objectAtIndex:row]];
+}
+
 @end
