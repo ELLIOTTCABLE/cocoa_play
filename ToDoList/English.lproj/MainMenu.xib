@@ -1258,14 +1258,14 @@
 												</object>
 											</object>
 											<double key="NSRowHeight">1.700000e+01</double>
-											<int key="NSTvFlags">-700448768</int>
+											<int key="NSTvFlags">-1774190592</int>
 											<int key="NSColumnAutoresizingStyle">4</int>
 											<int key="NSDraggingSourceMaskForLocal">15</int>
 											<int key="NSDraggingSourceMaskForNonLocal">0</int>
 											<bool key="NSAllowsTypeSelect">YES</bool>
 										</object>
 									</object>
-									<string key="NSFrame">{{1, 18}, {423, 256}}</string>
+									<string key="NSFrame">{{1, 17}, {423, 257}}</string>
 									<reference key="NSSuperview" ref="537744516"/>
 									<reference key="NSNextKeyView" ref="194287699"/>
 									<reference key="NSDocView" ref="194287699"/>
