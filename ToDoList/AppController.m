@@ -22,12 +22,13 @@
 }
 
 - (void)controlTextDidEndEditing:(NSNotification *)aNotification {
-  NSString *value = [textField stringValue];
-  NSLog(@"- controlTextDidEndEditing: %@", value);
+  NSString *value = [[aNotification object] stringValue];
+  NSLog(@"- controlTextDidEndEditing:%@ == %@", [aNotification object], value);
+  
   if(![value isEqualToString:@""]) {
     [toDos addObject:value];
+    [[aNotification object] setStringValue:@""];
     [tableView reloadData];
-    [textField setStringValue:@""];
   }
 }
 
