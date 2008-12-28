@@ -1201,16 +1201,16 @@
 														<int key="NSCellFlags">75628032</int>
 														<int key="NSCellFlags2">0</int>
 														<string key="NSContents"/>
-														<object class="NSFont" key="NSSupport" id="26">
+														<object class="NSFont" key="NSSupport">
 															<string key="NSName">LucidaGrande</string>
 															<double key="NSSize">1.100000e+01</double>
 															<int key="NSfFlags">3100</int>
 														</object>
-														<object class="NSColor" key="NSBackgroundColor" id="306152166">
+														<object class="NSColor" key="NSBackgroundColor">
 															<int key="NSColorSpace">3</int>
 															<bytes key="NSWhite">MC4zMzMzMzI5OQA</bytes>
 														</object>
-														<object class="NSColor" key="NSTextColor" id="42056489">
+														<object class="NSColor" key="NSTextColor">
 															<int key="NSColorSpace">6</int>
 															<string key="NSCatalogName">System</string>
 															<string key="NSColorName">headerTextColor</string>
@@ -1232,7 +1232,7 @@
 																<bytes key="NSWhite">MC42NjY2NjY2OQA</bytes>
 															</object>
 														</object>
-														<object class="NSColor" key="NSTextColor" id="1061392287">
+														<object class="NSColor" key="NSTextColor">
 															<int key="NSColorSpace">6</int>
 															<string key="NSCatalogName">System</string>
 															<string key="NSColorName">controlTextColor</string>
