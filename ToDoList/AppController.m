@@ -24,9 +24,11 @@
 - (void)controlTextDidEndEditing:(NSNotification *)aNotification {
   NSString *value = [textField stringValue];
   NSLog(@"- controlTextDidEndEditing: %@", value);
-  [toDos addObject:value];
-  [tableView reloadData];
-  [textField setStringValue:@""];
+  if(![value isEqualToString:@""]) {
+    [toDos addObject:value];
+    [tableView reloadData];
+    [textField setStringValue:@""];
+  }
 }
 
 @end
