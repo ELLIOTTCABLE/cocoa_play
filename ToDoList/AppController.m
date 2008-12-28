@@ -6,6 +6,7 @@
   [super init];
   
   toDos = [NSMutableArray arrayWithCapacity:1];
+  [toDos addObject:@"Play with ToDoList!"];
   
   return self;
 }
@@ -21,7 +22,11 @@
 }
 
 - (void)controlTextDidEndEditing:(NSNotification *)aNotification {
-  NSLog(@"- controlTextDidEndEditing called");
+  NSString *value = [textField stringValue];
+  NSLog(@"- controlTextDidEndEditing: %@", value);
+  [toDos addObject:value];
+  [tableView reloadData];
+  [textField setStringValue:@""];
 }
 
 @end
