@@ -21,7 +21,7 @@
 }
 
 - (void)controlTextDidEndEditing:(NSNotification *)aNotification {
-	NSLog(@"- controlTextDidEndEditing called");
+  NSLog(@"- controlTextDidEndEditing called");
 }
 
 @end
