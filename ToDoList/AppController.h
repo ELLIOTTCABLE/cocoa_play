@@ -4,7 +4,7 @@
   IBOutlet NSTextField *textField;
   IBOutlet NSTableView *tableView;
   
-  NSArray *toDos;
+  NSMutableArray *toDos;
 }
 
 
