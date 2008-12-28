@@ -1175,7 +1175,7 @@
 										<object class="NSTableView" id="194287699">
 											<reference key="NSNextResponder" ref="406736974"/>
 											<int key="NSvFlags">256</int>
-											<string key="NSFrameSize">{423, 256}</string>
+											<string key="NSFrameSize">{423, 257}</string>
 											<reference key="NSSuperview" ref="406736974"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSTableHeaderView" key="NSHeaderView" id="491010299">
@@ -1188,7 +1188,7 @@
 											<object class="_NSCornerView" key="NSCornerView" id="566375659">
 												<reference key="NSNextResponder" ref="537744516"/>
 												<int key="NSvFlags">256</int>
-												<string key="NSFrame">{{424, 1}, {16, 17}}</string>
+												<string key="NSFrame">{{424, 0}, {16, 17}}</string>
 												<reference key="NSSuperview" ref="537744516"/>
 											</object>
 											<object class="NSMutableArray" key="NSTableColumns">
@@ -1275,7 +1275,7 @@
 								<object class="NSScroller" id="693021507">
 									<reference key="NSNextResponder" ref="537744516"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{424, 18}, {15, 256}}</string>
+									<string key="NSFrame">{{424, 17}, {15, 257}}</string>
 									<reference key="NSSuperview" ref="537744516"/>
 									<reference key="NSTarget" ref="537744516"/>
 									<string key="NSAction">_doScroller:</string>
@@ -1298,7 +1298,7 @@
 										<bool key="EncodedWithXMLCoder">YES</bool>
 										<reference ref="491010299"/>
 									</object>
-									<string key="NSFrame">{{1, 1}, {423, 17}}</string>
+									<string key="NSFrame">{{1, 0}, {423, 17}}</string>
 									<reference key="NSSuperview" ref="537744516"/>
 									<reference key="NSNextKeyView" ref="491010299"/>
 									<reference key="NSDocView" ref="491010299"/>
@@ -3190,7 +3190,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
 					<string>{{525, 802}, {197, 73}}</string>
-					<string>{{207, 285}, {478, 20}}</string>
+					<string>{{169, 285}, {478, 20}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
 					<string>{74, 862}</string>
@@ -3213,8 +3213,8 @@
 					<reference ref="9"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
-					<string>{{335, 390}, {480, 360}}</string>
-					<string>{{335, 390}, {480, 360}}</string>
+					<string>{{167, 390}, {480, 360}}</string>
+					<string>{{167, 390}, {480, 360}}</string>
 					<reference ref="9"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<string>{3.40282e+38, 3.40282e+38}</string>
@@ -3281,7 +3281,7 @@
 					<reference ref="9"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
-					<string>{{219, 102}, {245, 183}}</string>
+					<string>{{181, 102}, {245, 183}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
 					<string>{{23, 794}, {245, 183}}</string>
