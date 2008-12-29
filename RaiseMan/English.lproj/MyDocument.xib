@@ -290,6 +290,15 @@
 			<object class="NSCustomObject" id="796877042">
 				<string key="NSClassName">NSApplication</string>
 			</object>
+			<object class="NSArrayController" id="858851627">
+				<bool key="NSEditable">YES</bool>
+				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
+				<bool key="NSAvoidsEmptySelection">YES</bool>
+				<bool key="NSPreservesSelection">YES</bool>
+				<bool key="NSSelectsInsertedObjects">YES</bool>
+				<bool key="NSFilterRestrictsInsertion">YES</bool>
+				<bool key="NSClearsFilterPredicateOnInsertion">YES</bool>
+			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<object class="NSMutableArray" key="connectionRecords">
@@ -454,6 +463,11 @@
 						<reference key="object" ref="733105714"/>
 						<reference key="parent" ref="147240810"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100034</int>
+						<reference key="object" ref="858851627"/>
+						<reference key="parent" ref="0"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -476,6 +490,7 @@
 					<string>100031.IBPluginDependency</string>
 					<string>100032.IBPluginDependency</string>
 					<string>100033.IBPluginDependency</string>
+					<string>100034.IBPluginDependency</string>
 					<string>5.IBEditorWindowLastContentRect</string>
 					<string>5.IBWindowTemplateEditedContentRect</string>
 					<string>5.ImportedFromIB2</string>
@@ -487,6 +502,7 @@
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -533,7 +549,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100033</int>
+			<int key="maxID">100034</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
