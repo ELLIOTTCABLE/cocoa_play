@@ -10,15 +10,7 @@
   return self;
 }
 
-- (int)fido {
-  NSLog(@"-fido is returning %d", fido);
-  return fido;
-}
-
-- (void)setFido:(int)x {
-  NSLog(@"-setFido: is called with %d", x);
-  fido = x;
-}
+@synthesize fido;
 
 - (IBAction)incrementFido:(id)sender {
   [self setFido:[self fido] + 1];
