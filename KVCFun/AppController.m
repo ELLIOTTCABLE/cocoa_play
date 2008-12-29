@@ -21,7 +21,7 @@
 }
 
 - (IBAction)incrementFido:(id)sender {
-  [self setValue:[NSNumber numberWithInt:[[self valueForKey:@"fido"] intValue] + 1] forKey:@"fido"];
+  [self setFido:[self fido] + 1];
   NSLog(@"fido is now %d", fido);
 }
 
