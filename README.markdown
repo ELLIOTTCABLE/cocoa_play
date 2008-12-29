@@ -4,6 +4,24 @@ Fuck if I know. Just following the <a title="Cocoa Programming for Mac OS Xâ€Šâ€
 Or rather, trying to. Cocoa and Objective-C are really hard for me, for
 whatever reason.
 
+Structure
+---------
+As I go through the Hillegass book, I'm making every change described in the
+book (even those which you are not instructed to make). You should be able to
+link any example of code in the Hillegass book here on GitHub in this
+repository fairly easily.
+
+I'm dropping a git tag every time I finish a chapter's instructions (even if
+later chapters modify the code / project that was created), so you can see the
+'completed state' of the project of any chapter by clicking on a given tag in
+the 'tags' dropdown at the top of this project's GitHub page, and choosing a
+chapter's tag.
+
+I also tag standalone 'challenges' of the sort that Hillegass provides, when I
+complete them. Remember that the challenges are freeform, and my
+code/implementation is likely to differ from yours - in some cases, it doesn't
+even look all that similar to the screenshots provided in the Hillegass book.
+
 Interface Builder note
 ----------------------
 It's worth noting that, due to my obsession with git, I'm manually policing
