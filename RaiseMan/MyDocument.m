@@ -4,12 +4,7 @@
 
 - (id)init {
   self = [super init];
-  if (self) {
-    
-    // Add your subclass-specific initialization here.
-    // If an error occurs here, send a [self release] message and return nil.
-    
-  }
+  employees = [[NSMutableArray alloc] init];
   return self;
 }
 
@@ -48,6 +43,11 @@
     *outError = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
   }
   return YES;
+}
+
+- (void)dealloc {
+  [self setEmployees:nil];
+  [super dealloc];
 }
 
 @end
