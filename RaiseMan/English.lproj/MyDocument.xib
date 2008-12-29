@@ -159,6 +159,8 @@
 																	<bool key="EncodedWithXMLCoder">YES</bool>
 																	<string>allowsFloats</string>
 																	<string>formatterBehavior</string>
+																	<string>maximum</string>
+																	<string>minimum</string>
 																	<string>multiplier</string>
 																	<string>negativeFormat</string>
 																	<string>numberStyle</string>
@@ -168,6 +170,8 @@
 																	<bool key="EncodedWithXMLCoder">YES</bool>
 																	<integer value="1" id="9"/>
 																	<integer value="1040"/>
+																	<real value="1.000000e+02" id="547745938"/>
+																	<real value="0.000000e+00" id="581066569"/>
 																	<real value="1.000000e+00"/>
 																	<string>#.##%</string>
 																	<integer value="3"/>
@@ -196,15 +200,8 @@
 																	</object>
 																</object>
 															</object>
-															<object class="NSDecimalNumberPlaceholder" key="NS.min" id="418473951">
-																<int key="NS.exponent">0</int>
-																<int key="NS.length">0</int>
-																<bool key="NS.negative">YES</bool>
-																<bool key="NS.compact">NO</bool>
-																<int key="NS.mantissa.bo">1</int>
-																<bytes key="NS.mantissa">AAAAAAAAAAAAAAAAAAAAAA</bytes>
-															</object>
-															<reference key="NS.max" ref="418473951"/>
+															<reference key="NS.min" ref="581066569"/>
+															<reference key="NS.max" ref="547745938"/>
 															<object class="NSDecimalNumberHandler" key="NS.rounding">
 																<int key="NS.roundingmode">3</int>
 																<bool key="NS.raise.overflow">YES</bool>
