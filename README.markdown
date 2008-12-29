@@ -15,6 +15,14 @@ of work to make them human-readable and clean, so please go peruse them! Maybe
 you will learn something about the structure of XIB files through doing so
 (though I doubt it'll be as much as I've learned through said hand-editing!)
 
+*Update:* I've taken the time to write up an extremely `(int|ext)ensive` blog
+post about these topics, describing everything that I've learned, throughout
+this project, about XIB files and how to git-version them safely/cleanly. If
+you're at all considering working on a Cocoa project and storing that project
+in a source control repository, you really should read it:
+
+<http://blog.elliottcable.name/git_versioning_interface_builder_s_xib_files.xhtml>
+
 On a related note, I occasionally make *extremely* granular commit streams to
 this repository, going through a save/police/interactive-stage/commit process
 after I drag any item, change any attribute, or do anything else, in the
