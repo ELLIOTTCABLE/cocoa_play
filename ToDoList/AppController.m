@@ -21,6 +21,13 @@
   return [toDos objectAtIndex:rowIndex];
 }
 
+- (void)tableView:(NSTableView *)aTableView
+   setObjectValue:(id)anObject
+   forTableColumn:(NSTableColumn *)aTableColumn
+              row:(NSInteger)rowIndex {
+  [toDos replaceObjectAtIndex:rowIndex withObject:anObject];
+}
+
 - (void)controlTextDidEndEditing:(NSNotification *)aNotification {
   NSString *value = [[aNotification object] stringValue];
   NSLog(@"- controlTextDidEndEditing:%@ == %@", [aNotification object], value);
