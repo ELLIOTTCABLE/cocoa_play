@@ -1220,6 +1220,9 @@
 			<object class="NSCustomObject" id="1019542300">
 				<string key="NSClassName">AppController</string>
 			</object>
+			<object class="NSUserDefaultsController" id="88248352">
+				<bool key="NSSharedInstance">YES</bool>
+			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<object class="NSMutableArray" key="connectionRecords">
@@ -1775,6 +1778,22 @@
 						<reference key="destination" ref="853702739"/>
 					</object>
 					<int key="connectionID">458</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: fido</string>
+						<reference key="source" ref="700251833"/>
+						<reference key="destination" ref="1019542300"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="700251833"/>
+							<reference key="NSDestination" ref="1019542300"/>
+							<string key="NSLabel">value: fido</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">fido</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">464</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2725,6 +2744,11 @@
 						<reference key="object" ref="317042706"/>
 						<reference key="parent" ref="700251833"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">461</int>
+						<reference key="object" ref="88248352"/>
+						<reference key="parent" ref="1049"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -3212,7 +3236,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">460</int>
+			<int key="maxID">464</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
