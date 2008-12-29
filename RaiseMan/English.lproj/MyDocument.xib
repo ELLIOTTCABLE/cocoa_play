@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="100027"/>
+			<integer value="6"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -160,9 +160,12 @@
 																	<string>allowsFloats</string>
 																	<string>formatterBehavior</string>
 																	<string>maximum</string>
+																	<string>maximumIntegerDigits</string>
 																	<string>minimum</string>
+																	<string>minimumFractionDigits</string>
 																	<string>multiplier</string>
 																	<string>negativeFormat</string>
+																	<string>nilSymbol</string>
 																	<string>numberStyle</string>
 																	<string>positiveFormat</string>
 																</object>
@@ -170,11 +173,14 @@
 																	<bool key="EncodedWithXMLCoder">YES</bool>
 																	<integer value="1" id="9"/>
 																	<integer value="1040"/>
-																	<real value="1.000000e+02" id="547745938"/>
-																	<real value="0.000000e+00" id="581066569"/>
-																	<real value="1.000000e+00"/>
-																	<string>#.##%</string>
+																	<real value="1.000000e+02" id="67528184"/>
 																	<integer value="3"/>
+																	<real value="0.000000e+00" id="251374003"/>
+																	<integer value="2"/>
+																	<real value="1.000000e-02"/>
+																	<string>#.##%</string>
+																	<string>Nil</string>
+																	<integer value="0"/>
 																	<string>#.##%</string>
 																</object>
 															</object>
@@ -186,11 +192,8 @@
 																<nil key="NSString"/>
 															</object>
 															<object class="NSAttributedString" key="NS.nil">
-																<nil key="NSString"/>
-															</object>
-															<object class="NSAttributedString" key="NS.nan">
-																<string key="NSString">NaN</string>
-																<object class="NSDictionary" key="NSAttributes">
+																<string key="NSString">Nil</string>
+																<object class="NSDictionary" key="NSAttributes" id="411092251">
 																	<bool key="EncodedWithXMLCoder">YES</bool>
 																	<object class="NSArray" key="dict.sortedKeys">
 																		<bool key="EncodedWithXMLCoder">YES</bool>
@@ -200,8 +203,12 @@
 																	</object>
 																</object>
 															</object>
-															<reference key="NS.min" ref="581066569"/>
-															<reference key="NS.max" ref="547745938"/>
+															<object class="NSAttributedString" key="NS.nan">
+																<string key="NSString">NaN</string>
+																<reference key="NSAttributes" ref="411092251"/>
+															</object>
+															<reference key="NS.min" ref="251374003"/>
+															<reference key="NS.max" ref="67528184"/>
 															<object class="NSDecimalNumberHandler" key="NS.rounding">
 																<int key="NS.roundingmode">3</int>
 																<bool key="NS.raise.overflow">YES</bool>
