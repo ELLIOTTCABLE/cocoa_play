@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
+			<integer value="100027"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -159,6 +159,7 @@
 																	<bool key="EncodedWithXMLCoder">YES</bool>
 																	<string>allowsFloats</string>
 																	<string>formatterBehavior</string>
+																	<string>multiplier</string>
 																	<string>negativeFormat</string>
 																	<string>numberStyle</string>
 																	<string>positiveFormat</string>
@@ -167,6 +168,7 @@
 																	<bool key="EncodedWithXMLCoder">YES</bool>
 																	<integer value="1" id="9"/>
 																	<integer value="1040"/>
+																	<real value="1.000000e+00"/>
 																	<string>#.##%</string>
 																	<integer value="3"/>
 																	<string>#.##%</string>
