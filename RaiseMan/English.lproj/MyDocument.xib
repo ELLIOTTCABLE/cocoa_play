@@ -167,13 +167,13 @@
 																	<bool key="EncodedWithXMLCoder">YES</bool>
 																	<integer value="1" id="9"/>
 																	<integer value="1040"/>
-																	<string>#.##</string>
+																	<string>#.##%</string>
 																	<integer value="3"/>
-																	<string>#.##</string>
+																	<string>#.##%</string>
 																</object>
 															</object>
-															<string key="NS.positiveformat">#.##</string>
-															<string key="NS.negativeformat">#.##</string>
+															<string key="NS.positiveformat">#.##%</string>
+															<string key="NS.negativeformat">#.##%</string>
 															<nil key="NS.positiveattrs"/>
 															<nil key="NS.negativeattrs"/>
 															<object class="NSAttributedString" key="NS.zero">
