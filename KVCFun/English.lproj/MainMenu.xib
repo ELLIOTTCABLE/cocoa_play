@@ -1132,7 +1132,7 @@
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSliderCell" key="NSCell" id="616355021">
-								<int key="NSCellFlags">67239424</int>
+								<int key="NSCellFlags">67501824</int>
 								<int key="NSCellFlags2">0</int>
 								<string key="NSContents"/>
 								<object class="NSFont" key="NSSupport">
