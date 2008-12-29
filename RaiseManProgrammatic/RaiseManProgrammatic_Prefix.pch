@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'RaiseManProgrammatic' target in the 'RaiseManProgrammatic' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
