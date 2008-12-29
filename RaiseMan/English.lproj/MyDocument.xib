@@ -452,6 +452,22 @@
 					</object>
 					<int key="connectionID">100044</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">enabled: canRemove</string>
+						<reference key="source" ref="147240810"/>
+						<reference key="destination" ref="858851627"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="147240810"/>
+							<reference key="NSDestination" ref="858851627"/>
+							<string key="NSLabel">enabled: canRemove</string>
+							<string key="NSBinding">enabled</string>
+							<string key="NSKeyPath">canRemove</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">100046</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -693,7 +709,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100044</int>
+			<int key="maxID">100046</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
