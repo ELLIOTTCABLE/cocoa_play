@@ -8,6 +8,17 @@
   return self;
 }
 
+- (void)setEmployees:(NSMutableArray *)a {
+  // This is an unusual setter method.  We are going to add a lot
+  // of smarts to it in the next chapter.
+  if (a == employees)
+    return;
+  
+  [a retain];
+  [employees release];
+  employees = a;
+}
+
 - (NSString *)windowNibName {
   // Override returning the nib file name of the document
   // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
