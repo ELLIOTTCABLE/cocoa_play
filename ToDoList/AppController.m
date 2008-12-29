@@ -25,10 +25,12 @@
   NSString *value = [[aNotification object] stringValue];
   NSLog(@"- controlTextDidEndEditing:%@ == %@", [aNotification object], value);
   
-  if(![value isEqualToString:@""]) {
-    [toDos addObject:value];
-    [[aNotification object] setStringValue:@""];
-    [tableView reloadData];
+  if([[aNotification object] isKindOfClass:[NSTextField class]]) {
+    if(![value isEqualToString:@""]) {
+      [toDos addObject:value];
+      [[aNotification object] setStringValue:@""];
+      [tableView reloadData];
+    }
   }
 }
 
