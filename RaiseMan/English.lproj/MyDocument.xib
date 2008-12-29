@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
+			<integer value="100024"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -134,6 +134,11 @@
 													<bool key="NSIsResizeable">YES</bool>
 													<bool key="NSIsEditable">YES</bool>
 													<reference key="NSTableView" ref="812995547"/>
+													<object class="NSSortDescriptor" key="NSSortDescriptorPrototype">
+														<string key="NSKey">personName</string>
+														<bool key="NSAscending">YES</bool>
+														<string key="NSSelector">caseInsensitiveCompare:</string>
+													</object>
 												</object>
 												<object class="NSTableColumn" id="101554273">
 													<double key="NSWidth">7.500000e+01</double>
@@ -173,9 +178,9 @@
 																	<bool key="EncodedWithXMLCoder">YES</bool>
 																	<integer value="1" id="9"/>
 																	<integer value="1040"/>
-																	<real value="1.000000e+02" id="67528184"/>
+																	<real value="1.000000e+02" id="316082051"/>
 																	<integer value="3"/>
-																	<real value="0.000000e+00" id="251374003"/>
+																	<real value="0.000000e+00" id="272048330"/>
 																	<integer value="2"/>
 																	<real value="1.000000e-02"/>
 																	<string>#.##%</string>
@@ -193,7 +198,7 @@
 															</object>
 															<object class="NSAttributedString" key="NS.nil">
 																<string key="NSString">Nil</string>
-																<object class="NSDictionary" key="NSAttributes" id="411092251">
+																<object class="NSDictionary" key="NSAttributes" id="8370536">
 																	<bool key="EncodedWithXMLCoder">YES</bool>
 																	<object class="NSArray" key="dict.sortedKeys">
 																		<bool key="EncodedWithXMLCoder">YES</bool>
@@ -205,10 +210,10 @@
 															</object>
 															<object class="NSAttributedString" key="NS.nan">
 																<string key="NSString">NaN</string>
-																<reference key="NSAttributes" ref="411092251"/>
+																<reference key="NSAttributes" ref="8370536"/>
 															</object>
-															<reference key="NS.min" ref="251374003"/>
-															<reference key="NS.max" ref="67528184"/>
+															<reference key="NS.min" ref="272048330"/>
+															<reference key="NS.max" ref="316082051"/>
 															<object class="NSDecimalNumberHandler" key="NS.rounding">
 																<int key="NS.roundingmode">3</int>
 																<bool key="NS.raise.overflow">YES</bool>
