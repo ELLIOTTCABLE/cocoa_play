@@ -1,6 +1,7 @@
 #import "AppController.h"
 
 @implementation AppController
+
 - (id)init {
   [super init];
   [self setValue:[NSNumber numberWithInt:5] forKey:@"fido"];
@@ -18,4 +19,10 @@
   NSLog(@"-setFido: is called with %d", x);
   fido = x;
 }
+
+- (IBAction)incrementFido:(id)sender {
+  fido++;
+  NSLog(@"fido is now %d", fido);
+}
+
 @end

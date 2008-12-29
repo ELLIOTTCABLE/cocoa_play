@@ -6,5 +6,6 @@
 
 - (int)fido;
 - (void)setFido:(int)x;
+- (IBAction)incrementFido:(id)sender;
 
 @end
