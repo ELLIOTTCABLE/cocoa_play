@@ -78,7 +78,7 @@
 											<object class="NSMutableArray" key="NSTableColumns">
 												<bool key="EncodedWithXMLCoder">YES</bool>
 												<object class="NSTableColumn" id="684416787">
-													<double key="NSWidth">1.010000e+02</double>
+													<double key="NSWidth">2.330000e+02</double>
 													<double key="NSMinWidth">4.000000e+01</double>
 													<double key="NSMaxWidth">1.000000e+03</double>
 													<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -136,7 +136,7 @@
 													<reference key="NSTableView" ref="812995547"/>
 												</object>
 												<object class="NSTableColumn" id="101554273">
-													<double key="NSWidth">2.070000e+02</double>
+													<double key="NSWidth">7.500000e+01</double>
 													<double key="NSMinWidth">4.000000e+01</double>
 													<double key="NSMaxWidth">1.000000e+03</double>
 													<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -210,7 +210,7 @@
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="654605906"/>
 									<string key="NSAction">_doScroller:</string>
-									<double key="NSPercent">5.714286e-01</double>
+									<double key="NSPercent">9.968254e-01</double>
 								</object>
 								<object class="NSClipView" id="840583429">
 									<reference key="NSNextResponder" ref="654605906"/>
