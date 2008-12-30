@@ -1,4 +1,5 @@
 #import "MyDocument.h"
+#import "Person.h"
 
 @implementation MyDocument
 
