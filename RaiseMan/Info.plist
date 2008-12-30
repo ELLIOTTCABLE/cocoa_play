@@ -9,12 +9,12 @@
 		<dict>
 			<key>CFBundleTypeExtensions</key>
 			<array>
-				<string>????</string>
+				<string>rsmn</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>BBall</string>
 			<key>CFBundleTypeName</key>
-			<string>DocumentType</string>
+			<string>RaiseMan Document</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>????</string>
