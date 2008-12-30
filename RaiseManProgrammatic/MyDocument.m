@@ -65,6 +65,14 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
   [person setValue:anObject forKey:identifier];
 }
 
+- (void)tableView:(NSTableView *)aTableView
+sortDescriptorsDidChange:(NSArray *)oldDescriptors {
+  NSArray *newDescriptors = [tableView sortDescriptors];
+  NSLog(@"-tableView:sortDescriptorsDidChange:, newDescriptors == @%", newDescriptors);
+  [employees sortUsingDescriptors:newDescriptors];
+  [tableView reloadData];
+}
+
 #pragma mark Pre-generated
 
 - (NSString *)windowNibName
