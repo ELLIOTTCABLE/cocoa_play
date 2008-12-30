@@ -5,4 +5,6 @@
   NSMutableArray *employees;
 }
 - (void)setEmployees:(NSMutableArray *)a;
+- (void)removeObjectFromEmployeesAtIndex:(int)index;
+- (void)insertObject:(Person *)p inEmployeesAtIndex:(int)index;
 @end
