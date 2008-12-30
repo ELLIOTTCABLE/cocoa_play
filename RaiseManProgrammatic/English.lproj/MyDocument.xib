@@ -310,6 +310,22 @@
 					</object>
 					<int key="connectionID">18</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">createEmployee:</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="741148089"/>
+					</object>
+					<int key="connectionID">100034</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">deleteSelectedEmployees:</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="532124884"/>
+					</object>
+					<int key="connectionID">100035</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -533,7 +549,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100033</int>
+			<int key="maxID">100035</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
