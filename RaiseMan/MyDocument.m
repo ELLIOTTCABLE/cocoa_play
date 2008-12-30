@@ -15,9 +15,16 @@
   if (a == employees)
     return;
   
+  for (Person *person in employees) {
+    [self stopObservingPerson:person];
+  }
+  
   [a retain];
   [employees release];
   employees = a;
+  for (Person *person in employees) {
+    [self startObservingPerson:person];
+  }
 }
 
 - (void)insertObject:(Person *)p inEmployeesAtIndex:(int)index {
@@ -29,6 +36,7 @@
     [undo setActionName:@"Insert Person"];
   }
   // Add the Person to the array
+  [self startObservingPerson:p];
   [employees insertObject:p atIndex:index];
 }
 
@@ -42,7 +50,51 @@
     [undo setActionName:@"Delete Person"];
   }
   
+  [self stopObservingPerson:p];
   [employees removeObjectAtIndex:index];
+}
+
+- (void)startObservingPerson:(Person *)person {
+  [person addObserver:self
+           forKeyPath:@"personName"
+              options:NSKeyValueObservingOptionOld
+              context:NULL];
+  
+  [person addObserver:self
+           forKeyPath:@"expectedRaise"
+              options:NSKeyValueObservingOptionOld
+              context:NULL];
+}
+
+- (void)stopObservingPerson:(Person *)person {
+  [person removeObserver:self forKeyPath:@"personName"];
+  [person removeObserver:self forKeyPath:@"expectedRaise"];
+}
+
+- (void)changeKeyPath:(NSString *)keyPath
+             ofObject:(id)obj
+              toValue:(id)newValue {
+  // setValue:forKeyPath: will cause the key-value observing method
+  // to be called, which takes care of the undo stuff
+  [obj setValue:newValue forKeyPath:keyPath];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+  NSUndoManager *undo = [self undoManager];
+  id oldValue = [change objectForKey:NSKeyValueChangeOldKey];
+  
+  // NSNull objects are used to represent nil in a dictionary
+  if (oldValue == [NSNull null]) {
+    oldValue = nil;
+  }
+  NSLog(@"oldValue = %@", oldValue);
+  [[undo prepareWithInvocationTarget:self] changeKeyPath:keyPath
+                                                ofObject:object
+                                                 toValue:oldValue];
+  [undo setActionName:@"Edit"];
 }
 
 - (NSString *)windowNibName {
