@@ -21,6 +21,10 @@
 			</array>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>name.elliottcable.learning.RaiseMan-document</string>
+			</array>
 			<key>NSDocumentClass</key>
 			<string>MyDocument</string>
 		</dict>
