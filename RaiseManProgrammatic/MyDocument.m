@@ -1,26 +1,69 @@
-//
-//  MyDocument.m
-//  RaiseManProgrammatic
-//
-//  Created by elliott cable on 12/29/08.
-//  Copyright __MyCompanyName__ 2008 . All rights reserved.
-//
-
 #import "MyDocument.h"
 
 @implementation MyDocument
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-    
-        // Add your subclass-specific initialization here.
-        // If an error occurs here, send a [self release] message and return nil.
-    
-    }
-    return self;
+- (id)init {
+  [super init];
+  employees = [[NSMutableArray alloc] init];
+  return self;
 }
+- (void)dealloc {
+  [employees release];
+  [super dealloc];
+}
+
+#pragma mark Action methods
+
+- (IBAction)deleteSelectedEmployees:(id)sender {
+  // Which row is selected?
+  NSIndexSet *rows = [tableView selectedRowIndexes];
+  
+  // Is the selection empty?
+  if ([rows count] == 0) {
+    NSBeep();
+    return;
+  }
+  [employees removeObjectsAtIndexes:rows];
+  [tableView reloadData];
+}
+- (IBAction)createEmployee:(id)sender {
+  Person *newEmployee = [[Person alloc] init];
+  [employees addObject:newEmployee];
+  [newEmployee release];
+  [tableView reloadData];
+}
+
+#pragma mark Table view dataSource methods
+
+- (int)numberOfRowsInTableView:(NSTableView *)aTableView {
+  return [employees count];
+}
+
+- (id)tableView:(NSTableView *)aTableView
+objectValueForTableColumn:(NSTableColumn *)aTableColumn
+            row:(int)rowIndex {
+  // What is the identifier for the column?
+  NSString *identifier = [aTableColumn identifier];
+  
+  // What person?
+  Person *person = [employees objectAtIndex:rowIndex];
+  
+  // What is the value of the attribute named identifier?
+  return [person valueForKey:identifier];
+}
+
+- (void)tableView:(NSTableView *)aTableView
+   setObjectValue:(id)anObject
+   forTableColumn:(NSTableColumn *)aTableColumn
+              row:(int)rowIndex {
+  NSString *identifier = [aTableColumn identifier];
+  Person *person = [employees objectAtIndex:rowIndex];
+  
+  // Set the value for the attribute named identifier
+  [person setValue:anObject forKey:identifier];
+}
+
+#pragma mark Pre-generated
 
 - (NSString *)windowNibName
 {

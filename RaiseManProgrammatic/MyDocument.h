@@ -1,15 +1,10 @@
-//
-//  MyDocument.h
-//  RaiseManProgrammatic
-//
-//  Created by elliott cable on 12/29/08.
-//  Copyright __MyCompanyName__ 2008 . All rights reserved.
-//
-
-
 #import <Cocoa/Cocoa.h>
+@class Person;
 
-@interface MyDocument : NSDocument
-{
+@interface MyDocument : NSDocument {
+  NSMutableArray *employees;
+  IBOutlet NSTableView *tableView;
 }
+- (IBAction)createEmployee:(id)sender;
+- (IBAction)deleteSelectedEmployees:(id)sender;
 @end
