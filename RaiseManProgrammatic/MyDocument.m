@@ -23,15 +23,14 @@
     NSBeep();
     return;
   }
-  NSLog(@"-deleteSelectedEmployees: == %@", rows);
+  NSLog(@"-deleteSelectedEmployees: is deleting %@", rows);
   [employees removeObjectsAtIndexes:rows];
   [tableView reloadData];
 }
 - (IBAction)createEmployee:(id)sender {
   Person *newEmployee = [[Person alloc] init];
-  NSLog(@"-createEmployee: == %@", newEmployee);
+  NSLog(@"-createEmployee: is creating %@", newEmployee);
   [employees addObject:newEmployee];
-  NSLog(@"employees is now %d elements long", [employees count]);
   [newEmployee release];
   [tableView reloadData];
 }
@@ -50,7 +49,6 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
   
   // What person?
   Person *person = [employees objectAtIndex:rowIndex];
-  NSLog(@"-tableView: objectValueForTableColumn:%@ row:%d", identifier, rowIndex);
   
   // What is the value of the attribute named identifier?
   return [person valueForKey:identifier];
