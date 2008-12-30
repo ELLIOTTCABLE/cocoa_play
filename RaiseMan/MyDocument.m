@@ -94,7 +94,7 @@
   [[undo prepareWithInvocationTarget:self] changeKeyPath:keyPath
                                                 ofObject:object
                                                  toValue:oldValue];
-  [undo setActionName:@"Edit"];
+  [undo setActionName:[NSString stringWithFormat:@"Edit to %@", [object personName]]];
 }
 
 - (NSString *)windowNibName {
