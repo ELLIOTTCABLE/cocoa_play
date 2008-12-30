@@ -175,6 +175,15 @@
   return YES;
 }
 
+- (NSData *)dataOfType:(NSString *)aType
+                 error:(NSError **)outError {
+  // End editing
+  [[tableView window] endEditingFor:nil];
+  
+  // Create an NSData object from the employees array
+  return [NSKeyedArchiver archivedDataWithRootObject:employees];
+}
+
 - (void)dealloc {
   [self setEmployees:nil];
   [super dealloc];
