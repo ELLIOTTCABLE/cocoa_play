@@ -50,6 +50,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
   
   // What person?
   Person *person = [employees objectAtIndex:rowIndex];
+  NSLog(@"-tableView: objectValueForTableColumn:%@ row:%d", identifier, rowIndex);
   
   // What is the value of the attribute named identifier?
   return [person valueForKey:identifier];
