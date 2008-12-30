@@ -15,7 +15,6 @@
 #pragma mark Action methods
 
 - (IBAction)deleteSelectedEmployees:(id)sender {
-  NSLog(@"-deleteSelectedEmployees:");
   // Which row is selected?
   NSIndexSet *rows = [tableView selectedRowIndexes];
   
@@ -24,13 +23,15 @@
     NSBeep();
     return;
   }
+  NSLog(@"-deleteSelectedEmployees: == %@", rows);
   [employees removeObjectsAtIndexes:rows];
   [tableView reloadData];
 }
 - (IBAction)createEmployee:(id)sender {
-  NSLog(@"-createEmployee:");
   Person *newEmployee = [[Person alloc] init];
+  NSLog(@"-createEmployee: == %@", newEmployee);
   [employees addObject:newEmployee];
+  NSLog(@"employees is now %d elements long", [employees count]);
   [newEmployee release];
   [tableView reloadData];
 }
