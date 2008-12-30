@@ -15,6 +15,7 @@
 #pragma mark Action methods
 
 - (IBAction)deleteSelectedEmployees:(id)sender {
+  NSLog(@"-deleteSelectedEmployees:");
   // Which row is selected?
   NSIndexSet *rows = [tableView selectedRowIndexes];
   
@@ -27,6 +28,7 @@
   [tableView reloadData];
 }
 - (IBAction)createEmployee:(id)sender {
+  NSLog(@"-createEmployee:");
   Person *newEmployee = [[Person alloc] init];
   [employees addObject:newEmployee];
   [newEmployee release];
