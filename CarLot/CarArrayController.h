@@ -1,6 +1,6 @@
 #import <Cocoa/Cocoa.h>
 
-@interface CarArrayController : NSObject {
+@interface CarArrayController : NSArrayController {
   
 }
 
