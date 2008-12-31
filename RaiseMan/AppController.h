@@ -3,6 +3,7 @@
 
 @interface AppController : NSObject {
   PreferenceController *preferenceController;
+  NSWindowController *aboutController;
   IBOutlet NSPanel *aboutPanel;
 }
 - (IBAction)showPreferencePanel:(id)sender;

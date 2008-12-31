@@ -12,4 +12,14 @@
   [preferenceController showWindow:self];
 }
 
+- (IBAction)showAboutPanel:(id)sender {
+  [NSBundle loadNibNamed:@"About" owner:self];
+  
+  if (!aboutController) {
+    aboutController = [[NSWindowController alloc] init];
+  }
+  NSLog(@"showing %@", aboutController);
+  [aboutController showWindow:aboutPanel];
+}
+
 @end
