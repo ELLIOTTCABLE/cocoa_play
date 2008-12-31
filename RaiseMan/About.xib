@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.01">
+<archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.03">
 	<data>
-		<string key="IBDocument.SystemVersion">9A369</string>
-		<string key="IBDocument.InterfaceBuilderVersion">592</string>
-		<string key="IBDocument.AppKitVersion">894</string>
-		<string key="IBDocument.HIToolboxVersion">298.00</string>
+		<int key="IBDocument.SystemTarget">1050</int>
+		<string key="IBDocument.SystemVersion">9G55</string>
+		<string key="IBDocument.InterfaceBuilderVersion">677</string>
+		<string key="IBDocument.AppKitVersion">949.43</string>
+		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 		</object>
@@ -12,6 +13,15 @@
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<string>com.apple.InterfaceBuilderKit</string>
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+		</object>
+		<object class="NSMutableDictionary" key="IBDocument.Metadata">
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<object class="NSArray" key="dict.sortedKeys">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+			</object>
+			<object class="NSMutableArray" key="dict.values">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+			</object>
 		</object>
 		<object class="NSMutableArray" key="IBDocument.RootObjects" id="1000">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -23,6 +33,22 @@
 			</object>
 			<object class="NSCustomObject" id="1004">
 				<string key="NSClassName">NSApplication</string>
+			</object>
+			<object class="NSWindowTemplate" id="423088812">
+				<int key="NSWindowStyleMask">31</int>
+				<int key="NSWindowBacking">2</int>
+				<string key="NSWindowRect">{{196, 132}, {276, 378}}</string>
+				<int key="NSWTFlags">-1543503872</int>
+				<string key="NSWindowTitle">Window</string>
+				<string key="NSWindowClass">NSPanel</string>
+				<nil key="NSViewClass"/>
+				<object class="NSView" key="NSWindowView" id="765480498">
+					<nil key="NSNextResponder"/>
+					<int key="NSvFlags">256</int>
+					<string key="NSFrameSize">{276, 378}</string>
+				</object>
+				<string key="NSScreenRect">{{0, 0}, {1280, 778}}</string>
+				<string key="NSMaxSize">{3.40282e+38, 3.40282e+38}</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -58,6 +84,20 @@
 						<reference key="parent" ref="1002"/>
 						<string key="objectName">Application</string>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">1</int>
+						<reference key="object" ref="423088812"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="765480498"/>
+						</object>
+						<reference key="parent" ref="1002"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">2</int>
+						<reference key="object" ref="765480498"/>
+						<reference key="parent" ref="423088812"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -67,12 +107,18 @@
 					<string>-1.IBPluginDependency</string>
 					<string>-2.IBPluginDependency</string>
 					<string>-3.IBPluginDependency</string>
+					<string>1.IBPluginDependency</string>
+					<string>1.NSWindowTemplate.visibleAtLaunch</string>
+					<string>2.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilderKit</string>
 					<string>com.apple.InterfaceBuilderKit</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -95,41 +141,11 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">0</int>
+			<int key="maxID">2</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<object class="NSMutableDictionary" key="localDescriptions">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="NSArray" key="dict.sortedKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-				</object>
-				<object class="NSMutableArray" key="dict.values">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-				</object>
-			</object>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
-		<object class="NSMutableData" key="IBDocument.RunnableNib">
-			<bytes key="NS.bytes">YnBsaXN0MDDUAQIDBAUGCQpYJHZlcnNpb25UJHRvcFkkYXJjaGl2ZXJYJG9iamVjdHMSAAGGoNEHCF1J
-Qi5vYmplY3RkYXRhgAFfEA9OU0tleWVkQXJjaGl2ZXKvEB0LDDE1Njs8QERHS09SU1VZXmNkZWhrcHV2
-d3p9gFUkbnVsbN8QEg0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMFZOU1Jvb3RWJGNs
-YXNzXU5TT2JqZWN0c0tleXNfEA9OU0NsYXNzZXNWYWx1ZXNfEBlOU0FjY2Vzc2liaWxpdHlPaWRzVmFs
-dWVzXU5TQ29ubmVjdGlvbnNbTlNOYW1lc0tleXNbTlNGcmFtZXdvcmtdTlNDbGFzc2VzS2V5c1pOU09p
-ZHNLZXlzXU5TTmFtZXNWYWx1ZXNfEBlOU0FjY2Vzc2liaWxpdHlDb25uZWN0b3JzXU5TRm9udE1hbmFn
-ZXJfEBBOU1Zpc2libGVXaW5kb3dzXxAPTlNPYmplY3RzVmFsdWVzXxAXTlNBY2Nlc3NpYmlsaXR5T2lk
-c0tleXNZTlNOZXh0T2lkXE5TT2lkc1ZhbHVlc4ACgByACoAUgBuACIAPgAWAE4AVgBCAGYAAgAaADoAa
-EAKAFtIOMjM0W05TQ2xhc3NOYW1lgASAA1hOU09iamVjdNI3ODk6WCRjbGFzc2VzWiRjbGFzc25hbWWi
-OjVeTlNDdXN0b21PYmplY3RfEBBJQkNvY29hRnJhbWV3b3Jr0g49Pj9aTlMub2JqZWN0c4AHoNI3OEFC
-o0JDNVxOU011dGFibGVTZXRVTlNTZXTSDj1FRoAJoNI3OEhJo0lKNV5OU011dGFibGVBcnJheVdOU0Fy
-cmF50g49TE2ADaFOgAvSDjIzUYAEgAxdTlNBcHBsaWNhdGlvbtI3OFRKoko10g49TFeADaEfgALSDj1M
-W4ANok4fgAuAAtIOPUxggA2iYWKAEYASW0FwcGxpY2F0aW9uXEZpbGUncyBPd25lctIOPUxngA2g0g49
-TGqADaDSDj1MbYANok4fgAuAAtIOPUxygA2ic3SAF4AYE//////////9EAHSDj1FeYAJoNIOPUx8gA2g
-0g49TH+ADaDSNziBgqKCNV5OU0lCT2JqZWN0RGF0YQAIABEAGgAfACkAMgA3ADoASABKAFwAfACCAKkA
-sAC3AMUA1wDzAQEBDQEZAScBMgFAAVwBagF9AY8BqQGzAcABwgHEAcYByAHKAcwBzgHQAdIB1AHWAdgB
-2gHcAd4B4AHiAeQB6QH1AfcB+QICAgcCEAIbAh4CLQJAAkUCUAJSAlMCWAJcAmkCbwJ0AnYCdwJ8AoAC
-jwKXApwCngKgAqICpwKpAqsCuQK+AsECxgLIAsoCzALRAtMC1gLYAtoC3wLhAuQC5gLoAvQDAQMGAwgD
-CQMOAxADEQMWAxgDGwMdAx8DJAMmAykDKwMtAzYDOAM9Az8DQANFA0cDSANNA08DUANVA1gAAAAAAAAC
-AQAAAAAAAACDAAAAAAAAAAAAAAAAAAADZw</bytes>
-		</object>
+		<string key="IBDocument.LastKnownRelativeProjectPath">RaiseMan.xcodeproj</string>
+		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 	</data>
 </archive>
