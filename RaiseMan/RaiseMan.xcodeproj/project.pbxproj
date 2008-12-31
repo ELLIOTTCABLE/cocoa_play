@@ -14,6 +14,7 @@
 		51D705960F0BD554003F5DB6 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D705950F0BD554003F5DB6 /* AppController.m */; };
 		51D705B10F0BD72F003F5DB6 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D705B00F0BD72F003F5DB6 /* PreferenceController.m */; };
 		51D705B30F0BD852003F5DB6 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D705B20F0BD852003F5DB6 /* Preferences.xib */; };
+		51D705CF0F0BDF27003F5DB6 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D705CE0F0BDF27003F5DB6 /* About.xib */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
@@ -42,6 +43,7 @@
 		51D705AF0F0BD72F003F5DB6 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
 		51D705B00F0BD72F003F5DB6 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
 		51D705B20F0BD852003F5DB6 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		51D705CE0F0BDF27003F5DB6 /* About.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* RaiseMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiseMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				51D705CE0F0BDF27003F5DB6 /* About.xib */,
 				51D705B20F0BD852003F5DB6 /* Preferences.xib */,
 				51561DFA0F0AC5120062F2C6 /* BBall.icns */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
@@ -192,6 +195,7 @@
 				1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */,
 				51561DFB0F0AC5120062F2C6 /* BBall.icns in Resources */,
 				51D705B30F0BD852003F5DB6 /* Preferences.xib in Resources */,
+				51D705CF0F0BDF27003F5DB6 /* About.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
