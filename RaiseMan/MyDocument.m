@@ -1,3 +1,4 @@
+#import "PreferenceController.h"
 #import "MyDocument.h"
 #import "Person.h"
 
@@ -169,7 +170,11 @@
 
 - (void)windowControllerDidLoadNib:(NSWindowController *) aController {
   [super windowControllerDidLoadNib:aController];
-  // Add any code here that needs to be executed once the windowController has loaded the document's window.
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  NSData *colorAsData;
+  colorAsData = [defaults objectForKey:YRDKTableBackgroundColor];
+  
+  [tableView setBackgroundColor:[NSKeyedUnarchiver unarchiveObjectWithData:colorAsData]];
 }
 
 - (NSData *)dataOfType:(NSString *)aType
