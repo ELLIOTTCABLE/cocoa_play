@@ -1,5 +1,9 @@
 #import <Cocoa/Cocoa.h>
 
+// DKs - Defaults Keys
+extern NSString * const YRDKTableBackgroundColor;
+extern NSString * const YRDKEmptyDocumentAtStartup;
+
 @interface PreferenceController : NSWindowController {
   IBOutlet NSColorWell *colorWell;
   IBOutlet NSButton *checkbox;

@@ -1,5 +1,9 @@
 #import "PreferenceController.h"
 
+// DKs - Defaults Keys
+NSString * const YRDKTableBackgroundColor = @"TableBackgroundColor";
+NSString * const YRDKEmptyDocumentAtStartup = @"EmptyDocumentAtStartup";
+
 @implementation PreferenceController
 
 - (id)init {
