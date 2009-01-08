@@ -39,4 +39,9 @@
   [aboutController showWindow:aboutPanel];
 }
 
+- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender {
+  NSLog(@"- applicationShouldOpenUntitledFile:");
+  return [[NSUserDefaults standardUserDefaults] boolForKey:YRDKEmptyDocumentAtStartup];
+}
+
 @end
