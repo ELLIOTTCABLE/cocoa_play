@@ -10,4 +10,6 @@ extern NSString * const YRDKEmptyDocumentAtStartup;
 }
 - (IBAction)changeBackgroundColor:(id)sender;
 - (IBAction)changeNewEmptyDoc:(id)sender;
+- (NSColor *)tableBgColor;
+- (BOOL)emptyDoc;
 @end

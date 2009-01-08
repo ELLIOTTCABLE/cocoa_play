@@ -3,6 +3,23 @@
 
 @implementation AppController
 
++ (void)initialize {
+  // Create a dictionary
+  NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
+  
+  // Archive the color object
+  NSData *colorAsData = [NSKeyedArchiver archivedDataWithRootObject:[NSColor yellowColor]];
+  
+  // Put defaults in the dictionary
+  [defaultValues setObject:colorAsData forKey:YRDKTableBackgroundColor];
+  [defaultValues setObject:[NSNumber numberWithBool:YES] forKey:YRDKEmptyDocumentAtStartup];
+  
+  // Register the dictionary of defaults
+  [[NSUserDefaults standardUserDefaults]
+   registerDefaults: defaultValues];
+  NSLog(@"registered defaults: %@", defaultValues);
+}
+
 - (IBAction)showPreferencePanel:(id)sender{
   // Is preferenceController nil?
   if (!preferenceController) {
