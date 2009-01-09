@@ -111,6 +111,7 @@
   NSPoint p = [event locationInWindow];
   NSLog(@"mouseDragged:%@", NSStringFromPoint(p));
   currentPoint = [self convertPoint:p fromView:nil];
+  [self autoscroll:event];
   [self setNeedsDisplay:YES];
 }
 
