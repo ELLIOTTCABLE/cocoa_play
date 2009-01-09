@@ -4,6 +4,9 @@
 extern NSString * const YRDKTableBackgroundColor;
 extern NSString * const YRDKEmptyDocumentAtStartup;
 
+// NNs - Notification Names
+extern NSString * const YRNNTableBackgroundColorChanged;
+
 @interface PreferenceController : NSWindowController {
   IBOutlet NSColorWell *colorWell;
   IBOutlet NSButton *checkbox;

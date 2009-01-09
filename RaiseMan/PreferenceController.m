@@ -4,6 +4,9 @@
 NSString * const YRDKTableBackgroundColor = @"TableBackgroundColor";
 NSString * const YRDKEmptyDocumentAtStartup = @"EmptyDocumentAtStartup";
 
+// NNs - Notification Names
+NSString * const YRNNTableBackgroundColorChanged = @"YRNNTableBackgroundColorChanged";
+
 @implementation PreferenceController
 
 - (id)init {
