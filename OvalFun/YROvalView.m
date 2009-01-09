@@ -41,12 +41,22 @@
   
   // Set the two points the same, to ensure an extra 'rectangle' isn't drawn
   currentPoint = downPoint;
+  [self setNeedsDisplay:YES];
 }
 
 #pragma mark Drawing shit
 
 - (void)drawRect:(NSRect)rect {
   NSLog(@"- drawRect:]");
+  NSSize currentRectSize;
+  currentRectSize.width = currentPoint.x - downPoint.x;
+  currentRectSize.height = currentPoint.y - downPoint.y;
+  NSRect currentRect;
+  currentRect.origin = downPoint;
+  currentRect.size = currentRectSize;
+  
+  [[NSColor whiteColor] set];
+  [[NSBezierPath bezierPathWithOvalInRect:currentRect] stroke];
 }
 
 @end
