@@ -1125,28 +1125,28 @@
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSScrollView" id="657366180">
+						<object class="NSScrollView" id="68757520">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">274</int>
 							<object class="NSMutableArray" key="NSSubviews">
 								<bool key="EncodedWithXMLCoder">YES</bool>
-								<object class="NSClipView" id="755792792">
-									<reference key="NSNextResponder" ref="657366180"/>
+								<object class="NSClipView" id="159798355">
+									<reference key="NSNextResponder" ref="68757520"/>
 									<int key="NSvFlags">2304</int>
 									<object class="NSMutableArray" key="NSSubviews">
 										<bool key="EncodedWithXMLCoder">YES</bool>
-										<object class="NSCustomView" id="151103579">
-											<reference key="NSNextResponder" ref="755792792"/>
+										<object class="NSCustomView" id="428951655">
+											<reference key="NSNextResponder" ref="159798355"/>
 											<int key="NSvFlags">292</int>
-											<string key="NSFrameSize">{424, 304}</string>
-											<reference key="NSSuperview" ref="755792792"/>
+											<string key="NSFrameSize">{1000, 500}</string>
+											<reference key="NSSuperview" ref="159798355"/>
 											<string key="NSClassName">StretchView</string>
 										</object>
 									</object>
 									<string key="NSFrame">{{1, 1}, {424, 304}}</string>
-									<reference key="NSSuperview" ref="657366180"/>
-									<reference key="NSNextKeyView" ref="151103579"/>
-									<reference key="NSDocView" ref="151103579"/>
+									<reference key="NSSuperview" ref="68757520"/>
+									<reference key="NSNextKeyView" ref="428951655"/>
+									<reference key="NSDocView" ref="428951655"/>
 									<object class="NSColor" key="NSBGColor">
 										<int key="NSColorSpace">6</int>
 										<string key="NSCatalogName">System</string>
@@ -1158,34 +1158,36 @@
 									</object>
 									<int key="NScvFlags">4</int>
 								</object>
-								<object class="NSScroller" id="925506874">
-									<reference key="NSNextResponder" ref="657366180"/>
+								<object class="NSScroller" id="799711314">
+									<reference key="NSNextResponder" ref="68757520"/>
 									<int key="NSvFlags">256</int>
 									<string key="NSFrame">{{425, 1}, {15, 304}}</string>
-									<reference key="NSSuperview" ref="657366180"/>
-									<reference key="NSTarget" ref="657366180"/>
+									<reference key="NSSuperview" ref="68757520"/>
+									<bool key="NSEnabled">YES</bool>
+									<reference key="NSTarget" ref="68757520"/>
 									<string key="NSAction">_doScroller:</string>
 									<double key="NSCurValue">1.000000e+00</double>
-									<double key="NSPercent">9.636363e-01</double>
+									<double key="NSPercent">6.080000e-01</double>
 								</object>
-								<object class="NSScroller" id="784985714">
-									<reference key="NSNextResponder" ref="657366180"/>
+								<object class="NSScroller" id="698617739">
+									<reference key="NSNextResponder" ref="68757520"/>
 									<int key="NSvFlags">256</int>
 									<string key="NSFrame">{{1, 305}, {424, 15}}</string>
-									<reference key="NSSuperview" ref="657366180"/>
+									<reference key="NSSuperview" ref="68757520"/>
+									<bool key="NSEnabled">YES</bool>
 									<int key="NSsFlags">1</int>
-									<reference key="NSTarget" ref="657366180"/>
+									<reference key="NSTarget" ref="68757520"/>
 									<string key="NSAction">_doScroller:</string>
-									<double key="NSPercent">5.060241e-01</double>
+									<double key="NSPercent">4.240000e-01</double>
 								</object>
 							</object>
 							<string key="NSFrame">{{19, 20}, {441, 321}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSNextKeyView" ref="755792792"/>
-							<int key="NSsFlags">50</int>
-							<reference key="NSVScroller" ref="925506874"/>
-							<reference key="NSHScroller" ref="784985714"/>
-							<reference key="NSContentView" ref="755792792"/>
+							<reference key="NSNextKeyView" ref="159798355"/>
+							<int key="NSsFlags">242</int>
+							<reference key="NSVScroller" ref="799711314"/>
+							<reference key="NSHScroller" ref="698617739"/>
+							<reference key="NSContentView" ref="159798355"/>
 						</object>
 					</object>
 					<string key="NSFrameSize">{480, 360}</string>
@@ -2315,7 +2317,7 @@
 						<reference key="object" ref="439893737"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="657366180"/>
+							<reference ref="68757520"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -2631,29 +2633,29 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">451</int>
-						<reference key="object" ref="657366180"/>
+						<reference key="object" ref="68757520"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="925506874"/>
-							<reference ref="784985714"/>
-							<reference ref="151103579"/>
+							<reference ref="799711314"/>
+							<reference ref="698617739"/>
+							<reference ref="428951655"/>
 						</object>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">452</int>
-						<reference key="object" ref="925506874"/>
-						<reference key="parent" ref="657366180"/>
+						<reference key="object" ref="799711314"/>
+						<reference key="parent" ref="68757520"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">453</int>
-						<reference key="object" ref="784985714"/>
-						<reference key="parent" ref="657366180"/>
+						<reference key="object" ref="698617739"/>
+						<reference key="parent" ref="68757520"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">450</int>
-						<reference key="object" ref="151103579"/>
-						<reference key="parent" ref="657366180"/>
+						<reference key="object" ref="428951655"/>
+						<reference key="parent" ref="68757520"/>
 					</object>
 				</object>
 			</object>
