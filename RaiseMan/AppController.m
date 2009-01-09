@@ -44,4 +44,9 @@
   return [[NSUserDefaults standardUserDefaults] boolForKey:YRDKEmptyDocumentAtStartup];
 }
 
+- (void)applicationDidResignActive:(NSNotification *)note {
+  NSLog(@"- applicationDidResignActive:%@]", note);
+  NSBeep();
+}
+
 @end
