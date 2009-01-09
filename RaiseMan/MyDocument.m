@@ -144,6 +144,10 @@
   [person removeObserver:self forKeyPath:@"expectedRaise"];
 }
 
+- (void)handleColorChange:(NSNotification *)note {
+  NSLog(@"Received notification: %@", note);
+}
+
 - (void)changeKeyPath:(NSString *)keyPath
              ofObject:(id)obj
               toValue:(id)newValue {
