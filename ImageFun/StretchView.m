@@ -43,7 +43,7 @@
   [NSBezierPath fillRect:bounds];
   
   [[NSColor whiteColor] set];
-  [path stroke];
+  [path fill];
 }
 
 - (void)dealloc {
