@@ -1768,6 +1768,22 @@
 					</object>
 					<int key="connectionID">458</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: stretchView.opacity</string>
+						<reference key="source" ref="900177583"/>
+						<reference key="destination" ref="938134162"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="900177583"/>
+							<reference key="NSDestination" ref="938134162"/>
+							<string key="NSLabel">value: stretchView.opacity</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">stretchView.opacity</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">460</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -3201,7 +3217,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">458</int>
+			<int key="maxID">460</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
