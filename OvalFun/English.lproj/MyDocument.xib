@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
+			<integer value="100024"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -58,8 +58,8 @@
 										<bool key="EncodedWithXMLCoder">YES</bool>
 										<object class="NSCustomView" id="163487651">
 											<reference key="NSNextResponder" ref="738127701"/>
-											<int key="NSvFlags">274</int>
-											<string key="NSFrameSize">{641, 467}</string>
+											<int key="NSvFlags">301</int>
+											<string key="NSFrameSize">{2000, 1000}</string>
 											<reference key="NSSuperview" ref="738127701"/>
 											<string key="NSClassName">YROvalView</string>
 										</object>
@@ -84,26 +84,28 @@
 									<int key="NSvFlags">256</int>
 									<string key="NSFrame">{{642, 1}, {15, 467}}</string>
 									<reference key="NSSuperview" ref="754797360"/>
+									<bool key="NSEnabled">YES</bool>
 									<reference key="NSTarget" ref="754797360"/>
 									<string key="NSAction">_doScroller:</string>
 									<double key="NSCurValue">1.000000e+00</double>
-									<double key="NSPercent">9.636363e-01</double>
+									<double key="NSPercent">4.670000e-01</double>
 								</object>
 								<object class="NSScroller" id="114818893">
 									<reference key="NSNextResponder" ref="754797360"/>
 									<int key="NSvFlags">256</int>
 									<string key="NSFrame">{{1, 468}, {641, 15}}</string>
 									<reference key="NSSuperview" ref="754797360"/>
+									<bool key="NSEnabled">YES</bool>
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="754797360"/>
 									<string key="NSAction">_doScroller:</string>
-									<double key="NSPercent">5.060241e-01</double>
+									<double key="NSPercent">3.205000e-01</double>
 								</object>
 							</object>
 							<string key="NSFrame">{{-1, -1}, {658, 484}}</string>
 							<reference key="NSSuperview" ref="568628114"/>
 							<reference key="NSNextKeyView" ref="738127701"/>
-							<int key="NSsFlags">50</int>
+							<int key="NSsFlags">242</int>
 							<reference key="NSVScroller" ref="377853085"/>
 							<reference key="NSHScroller" ref="114818893"/>
 							<reference key="NSContentView" ref="738127701"/>
