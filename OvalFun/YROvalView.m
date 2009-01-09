@@ -20,17 +20,27 @@
 #pragma mark Things go clicky-click
 
 - (void)mouseDown:(NSEvent *)event {
-  NSLog(@"- mouseDown:%d]", [event clickCount]);
+  NSPoint p = [event locationInWindow];
+  NSLog(@"- mouseDragged:%@]", NSStringFromPoint(p));
+  downPoint = [self convertPoint:p fromView:nil];
+  currentPoint = downPoint;
+  [self setNeedsDisplay:YES];
 }
 
 - (void)mouseDragged:(NSEvent *)event {
-  NSPoint p = [event locationInWindow];
-  NSLog(@"- mouseDragged:%@]", NSStringFromPoint(p));
+  NSPoint dragToPoint = [event locationInWindow];
+  NSLog(@"- mouseDragged:%@]", NSStringFromPoint(dragToPoint));
+  currentPoint = [self convertPoint:dragToPoint fromView:nil];
   [self autoscroll:event];
+  [self setNeedsDisplay:YES];
 }
 
 - (void)mouseUp:(NSEvent *)event {
-  NSLog(@"- mouseUp:]");
+  NSPoint upPoint = [event locationInWindow];
+  NSLog(@"- mouseUp:%@]", NSStringFromPoint(upPoint));
+  
+  // Set the two points the same, to ensure an extra 'rectangle' isn't drawn
+  currentPoint = downPoint;
 }
 
 #pragma mark Drawing shit
