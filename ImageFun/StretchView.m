@@ -7,6 +7,8 @@
 
 @implementation StretchView
 
+#pragma mark Introduction
+
 - (id)initWithFrame:(NSRect)frame {
   if (![super initWithFrame:frame])
     return nil;
@@ -33,6 +35,8 @@
   return self;
 }
 
+#pragma mark Drawing
+
 - (NSPoint)randomPoint {
   NSPoint result;
   NSRect r = [self bounds];
@@ -49,6 +53,8 @@
   [[NSColor whiteColor] set];
   [path fill];
 }
+
+#pragma mark Closing remarks
 
 - (void)dealloc {
   [path release];
