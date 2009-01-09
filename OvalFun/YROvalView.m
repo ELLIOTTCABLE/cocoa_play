@@ -39,6 +39,13 @@
   NSPoint upPoint = [event locationInWindow];
   NSLog(@"- mouseUp:%@]", NSStringFromPoint(upPoint));
   
+  NSSize newRectSize;
+  newRectSize.width = upPoint.x - downPoint.x;
+  newRectSize.height = upPoint.y - downPoint.y;
+  NSRect newRect;
+  newRect.origin = downPoint;
+  newRect.size = newRectSize;
+  
   // Set the two points the same, to ensure an extra 'rectangle' isn't drawn
   currentPoint = downPoint;
   [self setNeedsDisplay:YES];
