@@ -87,7 +87,7 @@
   NSAlert *alert = [NSAlert alertWithMessageText:@"Delete?"
                                    defaultButton:@"Delete"
                                  alternateButton:@"Cancel"
-                                     otherButton:nil
+                                     otherButton:@"Leave as plebians"
                        informativeTextWithFormat:@"Do you really want to delete %d people?",
                     [selectedPeople count]];
   NSLog(@"Starting alert sheet");
@@ -106,6 +106,12 @@
     // The argument to remove: is ignored
     // The array controller will delete the selected objects
     [employeeController remove:nil];
+  } else if (choice == NSAlertOtherReturn) {
+    NSEnumerator *peopleEnumerator = [[employeeController selectedObjects] objectEnumerator];
+    Person *aPerson = nil;
+    while (aPerson = [peopleEnumerator nextObject]) {
+      [aPerson setExpectedRaise:0.0];
+    }
   }
 }
 
