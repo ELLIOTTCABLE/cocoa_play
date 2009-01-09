@@ -13,6 +13,8 @@
   return self;
 }
 
+@synthesize ovals;
+
 - (NSString *)windowNibName {
   return @"MyDocument";
 }
