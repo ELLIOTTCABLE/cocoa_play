@@ -17,12 +17,16 @@
   // Create a path object
   path = [[NSBezierPath alloc] init];
   [path setLineWidth:3.0];
-  NSPoint p = [self randomPoint];
-  [path moveToPoint:p];
+  NSPoint p1 = [self randomPoint];
+  [path moveToPoint:p1];
   int i;
+  NSPoint p2;
+  NSPoint p3;
   for (i = 0; i < 15; i++) {
-    p = [self randomPoint];
-    [path lineToPoint:p];
+    p1 = [self randomPoint];
+    p2 = [self randomPoint];
+    p3 = [self randomPoint];
+    [path curveToPoint:p1 controlPoint1:p2 controlPoint2:p3];
   }
   [path closePath];
   
