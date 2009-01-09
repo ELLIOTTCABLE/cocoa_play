@@ -330,7 +330,7 @@
 							<object class="NSButtonCell" key="NSCell" id="238574921">
 								<int key="NSCellFlags">-2080244224</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Add New Employee</string>
+								<string type="base64-UTF8" key="NSContents">Tm91dmVsbGUgRG9ubsOpZQ</string>
 								<reference key="NSSupport" ref="74873694"/>
 								<reference key="NSControlView" ref="452364875"/>
 								<int key="NSButtonFlags">-2033434369</int>
@@ -350,7 +350,7 @@
 							<object class="NSButtonCell" key="NSCell" id="733105714">
 								<int key="NSCellFlags">-2080244224</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Delete</string>
+								<string type="base64-UTF8" key="NSContents">U3VwcHJpbWVyIERvbm7DqWU</string>
 								<reference key="NSSupport" ref="74873694"/>
 								<reference key="NSControlView" ref="147240810"/>
 								<int key="NSButtonFlags">-2033434369</int>
