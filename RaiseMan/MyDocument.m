@@ -146,6 +146,8 @@
 
 - (void)handleColorChange:(NSNotification *)note {
   NSLog(@"Received notification: %@", note);
+  NSColor *color = [[note userInfo] objectForKey:YRDKTableBackgroundColor];
+  [tableView setBackgroundColor:color];
 }
 
 - (void)changeKeyPath:(NSString *)keyPath

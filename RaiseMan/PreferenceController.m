@@ -41,7 +41,11 @@ NSString * const YRNNTableBackgroundColorChanged = @"YRNNTableBackgroundColorCha
   
   NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
   NSLog(@"Sending notification");
-  [nc postNotificationName:YRNNTableBackgroundColorChanged object:self];
+  NSDictionary *d = [NSDictionary dictionaryWithObject:color
+                                                forKey:YRDKTableBackgroundColor];
+  [nc postNotificationName:YRNNTableBackgroundColorChanged
+                    object:self
+                  userInfo:d];
 }
 
 - (IBAction)changeNewEmptyDoc:(id)sender {
