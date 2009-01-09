@@ -38,6 +38,10 @@ NSString * const YRNNTableBackgroundColorChanged = @"YRNNTableBackgroundColorCha
   NSData *colorAsData = [NSKeyedArchiver archivedDataWithRootObject:color];
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
   [defaults setObject:colorAsData forKey:YRDKTableBackgroundColor];
+  
+  NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+  NSLog(@"Sending notification");
+  [nc postNotificationName:YRNNTableBackgroundColorChanged object:self];
 }
 
 - (IBAction)changeNewEmptyDoc:(id)sender {
