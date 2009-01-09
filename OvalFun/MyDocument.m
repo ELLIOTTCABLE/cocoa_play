@@ -28,12 +28,26 @@
 }
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError {
-  if (outError) *outError = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
-  return nil;
+  NSLog(@"- dataOfType:%@ error:]", typeName);
+  NSMutableSet *ovalsAsStrings = [NSMutableSet setWithCapacity:[ovals count]];
+  NSEnumerator *ovalsEnumerator = [ovals objectEnumerator];
+  NSValue *value = nil;
+  while (value = [ovalsEnumerator nextObject]) {
+    [ovalsAsStrings addObject:NSStringFromRect([value rectValue])];
+  }
+  
+  return [NSKeyedArchiver archivedDataWithRootObject:ovalsAsStrings];
 }
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError {
-  if (outError) *outError = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
+  NSLog(@"- readFromData:ofType:%@ error:]", typeName);
+  NSMutableSet *ovalsAsStrings = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+  NSEnumerator *stringsEnumerator = [ovalsAsStrings objectEnumerator];
+  NSString *string = nil;
+  while (string = [stringsEnumerator nextObject]) {
+    [ovals addObject:[NSValue valueWithRect:NSRectFromString(string)]];
+  }
+  
   return YES;
 }
 
