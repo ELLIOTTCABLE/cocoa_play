@@ -7,6 +7,7 @@
   IBOutlet NSArrayController *employeeController;
 }
 - (IBAction)createEmployee:(id)sender;
+- (IBAction)removeEmployee:(id)sender;
 - (void)setEmployees:(NSMutableArray *)a;
 - (void)removeObjectFromEmployeesAtIndex:(int)index;
 - (void)insertObject:(Person *)p inEmployeesAtIndex:(int)index;
