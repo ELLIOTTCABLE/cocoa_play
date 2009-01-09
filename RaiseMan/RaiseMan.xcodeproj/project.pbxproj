@@ -10,6 +10,7 @@
 		1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58280DA1D0D100B32029 /* MyDocument.xib */; };
 		1DDD582D0DA1D0D100B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD582A0DA1D0D100B32029 /* MainMenu.xib */; };
 		510499150F094355005C4DB0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 510499140F094355005C4DB0 /* Person.m */; };
+		514DFC780F177DA500A9029F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 514DFC760F177DA500A9029F /* Localizable.strings */; };
 		51561DFB0F0AC5120062F2C6 /* BBall.icns in Resources */ = {isa = PBXBuildFile; fileRef = 51561DFA0F0AC5120062F2C6 /* BBall.icns */; };
 		51D705960F0BD554003F5DB6 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D705950F0BD554003F5DB6 /* AppController.m */; };
 		51D705B10F0BD72F003F5DB6 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D705B00F0BD72F003F5DB6 /* PreferenceController.m */; };
@@ -38,6 +39,7 @@
 		510499130F094355005C4DB0 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		510499140F094355005C4DB0 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		514DFC720F177CBF00A9029F /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = French.lproj/MyDocument.xib; sourceTree = "<group>"; };
+		514DFC770F177DA500A9029F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		51561DFA0F0AC5120062F2C6 /* BBall.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BBall.icns; sourceTree = "<group>"; };
 		51D705940F0BD554003F5DB6 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		51D705950F0BD554003F5DB6 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
 				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
 				19C28FB0FE9D524F11CA2CBB /* Products */,
+				514DFC760F177DA500A9029F /* Localizable.strings */,
 			);
 			name = RaiseMan;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				51561DFB0F0AC5120062F2C6 /* BBall.icns in Resources */,
 				51D705B30F0BD852003F5DB6 /* Preferences.xib in Resources */,
 				51D705CF0F0BDF27003F5DB6 /* About.xib in Resources */,
+				514DFC780F177DA500A9029F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +253,14 @@
 				2A37F4BAFDCFA73011CA2CEA /* English */,
 			);
 			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		514DFC760F177DA500A9029F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				514DFC770F177DA500A9029F /* English */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
