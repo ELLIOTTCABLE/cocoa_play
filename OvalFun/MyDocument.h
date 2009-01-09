@@ -9,4 +9,6 @@
   NSMutableSet *ovals;
 }
 @property (readwrite,copy) NSMutableSet *ovals;
+- (void)addOvalsObject:(NSValue *)aValue;
+- (void)removeOvalsObject:(NSValue *)aValue;
 @end

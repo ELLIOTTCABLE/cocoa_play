@@ -47,7 +47,8 @@
   
   NSValue *rectAsValue = [NSValue valueWithRect:newRect];
   NSLog(@"- mouseUp:] preparing to add %@", rectAsValue);
-  [[owner ovals] addObject:[rectAsValue retain]];
+  [[owner mutableSetValueForKey:@"ovals"] addObject:[rectAsValue retain]];
+  
   NSLog(@"- mouseUp:] deposited %@", rectAsValue);
   
   // Set the two points the same, to ensure an extra 'rectangle' isn't drawn

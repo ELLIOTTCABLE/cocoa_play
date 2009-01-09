@@ -27,6 +27,15 @@
   [super windowControllerDidLoadNib:aController];
 }
 
+- (void)addOvalsObject:(NSValue *)aValue {
+  NSLog(@"- addOvalsObject:%@]", aValue);
+  [ovals addObject:aValue];
+}
+- (void)removeOvalsObject:(NSValue *)aValue {
+  NSLog(@"- removeOvalsObject:%@]", aValue);
+  [ovals removeObject:aValue];
+}
+
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError {
   NSLog(@"- dataOfType:%@ error:]", typeName);
   NSMutableSet *ovalsAsStrings = [NSMutableSet setWithCapacity:[ovals count]];
