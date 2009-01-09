@@ -44,4 +44,13 @@ NSString * const YRDKEmptyDocumentAtStartup = @"EmptyDocumentAtStartup";
   [defaults setBool:state forKey:YRDKEmptyDocumentAtStartup];
 }
 
+- (IBAction)resetPreferences:(id)sender {
+  NSLog(@"- resetPreferences:]");
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  [defaults removeObjectForKey:YRDKTableBackgroundColor];
+  [defaults removeObjectForKey:YRDKEmptyDocumentAtStartup];
+  [colorWell setColor:[self tableBgColor]];
+  [checkbox setState:[self emptyDoc]];
+}
+
 @end

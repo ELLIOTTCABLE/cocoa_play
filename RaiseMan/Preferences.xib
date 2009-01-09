@@ -147,18 +147,18 @@
 								<reference key="NSTextColor" ref="281893817"/>
 							</object>
 						</object>
-						<object class="NSButton" id="175721111">
+						<object class="NSButton" id="37716537">
 							<reference key="NSNextResponder" ref="945741732"/>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{20, 19}, {126, 25}}</string>
 							<reference key="NSSuperview" ref="945741732"/>
 							<bool key="NSEnabled">YES</bool>
-							<object class="NSButtonCell" key="NSCell" id="476976955">
+							<object class="NSButtonCell" key="NSCell" id="477685938">
 								<int key="NSCellFlags">-2080244224</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">Reset Preferences</string>
 								<reference key="NSSupport" ref="859171319"/>
-								<reference key="NSControlView" ref="175721111"/>
+								<reference key="NSControlView" ref="37716537"/>
 								<int key="NSButtonFlags">-2038152961</int>
 								<int key="NSButtonFlags2">163</int>
 								<string key="NSAlternateContents"/>
@@ -218,6 +218,14 @@
 					</object>
 					<int key="connectionID">18</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">resetPreferences:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="37716537"/>
+					</object>
+					<int key="connectionID">21</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -266,7 +274,7 @@
 							<reference ref="178589515"/>
 							<reference ref="279006208"/>
 							<reference ref="566504642"/>
-							<reference ref="175721111"/>
+							<reference ref="37716537"/>
 						</object>
 						<reference key="parent" ref="405638709"/>
 					</object>
@@ -319,17 +327,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">19</int>
-						<reference key="object" ref="175721111"/>
+						<reference key="object" ref="37716537"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="476976955"/>
+							<reference ref="477685938"/>
 						</object>
 						<reference key="parent" ref="945741732"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">20</int>
-						<reference key="object" ref="476976955"/>
-						<reference key="parent" ref="175721111"/>
+						<reference key="object" ref="477685938"/>
+						<reference key="parent" ref="37716537"/>
 					</object>
 				</object>
 			</object>
@@ -396,7 +404,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">20</int>
+			<int key="maxID">21</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
