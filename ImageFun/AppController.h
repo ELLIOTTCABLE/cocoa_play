@@ -4,6 +4,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "StretchView.h"
 
 @interface AppController : NSObject {
   IBOutlet StretchView *stretchView;
