@@ -60,6 +60,10 @@
 
 - (void)drawRect:(NSRect)rect {
   NSLog(@"- drawRect:]");
+  NSRect bounds = [self bounds];
+  [[NSColor grayColor] set];
+  [NSBezierPath fillRect:bounds];
+  
   NSSize currentRectSize;
   currentRectSize.width = currentPoint.x - downPoint.x;
   currentRectSize.height = currentPoint.y - downPoint.y;
