@@ -85,6 +85,15 @@
   }
 }
 
+- (NSRect)currentRect {
+  float minX = MIN(downPoint.x, currentPoint.x);
+  float maxX = MAX(downPoint.x, currentPoint.x);
+  float minY = MIN(downPoint.y, currentPoint.y);
+  float maxY = MAX(downPoint.y, currentPoint.y);
+  
+  return NSMakeRect(minX, minY, maxX-minX, maxY-minY);
+}
+
 #pragma mark Events
 
 - (void)mouseDown:(NSEvent *)event {
