@@ -7,6 +7,14 @@
 - (id)init {
   self = [super init];
   employees = [[NSMutableArray alloc] init];
+  
+  NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+  [nc addObserver:self
+         selector:@selector(handleColorChange:)
+             name:YRNNTableBackgroundColorChanged
+           object:nil];
+  NSLog(@"Registered with notification center");
+  
   return self;
 }
 
@@ -188,6 +196,8 @@
 
 - (void)dealloc {
   [self setEmployees:nil];
+  NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+  [nc removeObserver:self];
   [super dealloc];
 }
 
