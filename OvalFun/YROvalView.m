@@ -36,20 +36,19 @@
 }
 
 - (void)mouseUp:(NSEvent *)event {
-  NSPoint upPoint = [event locationInWindow];
-  NSLog(@"- mouseUp:%@]", NSStringFromPoint(upPoint));
+  NSLog(@"- mouseUp:]");
   
   NSSize newRectSize;
-  newRectSize.width = upPoint.x - downPoint.x;
-  newRectSize.height = upPoint.y - downPoint.y;
+  newRectSize.width = currentPoint.x - downPoint.x;
+  newRectSize.height = currentPoint.y - downPoint.y;
   NSRect newRect;
   newRect.origin = downPoint;
   newRect.size = newRectSize;
   
   NSValue *rectAsValue = [NSValue valueWithRect:newRect];
-  NSLog(@"- mouseUp:%@] preparing to add %@", NSStringFromPoint(upPoint), rectAsValue);
+  NSLog(@"- mouseUp:] preparing to add %@", rectAsValue);
   [[owner ovals] addObject:[rectAsValue retain]];
-  NSLog(@"- mouseUp:%@] added %@ to %@", NSStringFromPoint(upPoint), rectAsValue, [owner ovals]);
+  NSLog(@"- mouseUp:] deposited %@", rectAsValue);
   
   // Set the two points the same, to ensure an extra 'rectangle' isn't drawn
   currentPoint = downPoint;
@@ -58,25 +57,29 @@
 
 #pragma mark Drawing shit
 
+- (NSRect)currentRect
+{
+  float minX = MIN(downPoint.x, currentPoint.x);
+  float maxX = MAX(downPoint.x, currentPoint.x);
+  float minY = MIN(downPoint.y, currentPoint.y);
+  float maxY = MAX(downPoint.y, currentPoint.y);
+  
+  return NSMakeRect(minX, minY, maxX-minX, maxY-minY);
+}
+
 - (void)drawRect:(NSRect)rect {
   NSLog(@"- drawRect:]");
   NSRect bounds = [self bounds];
   [[NSColor grayColor] set];
   [NSBezierPath fillRect:bounds];
   
-  NSSize currentRectSize;
-  currentRectSize.width = currentPoint.x - downPoint.x;
-  currentRectSize.height = currentPoint.y - downPoint.y;
-  NSRect currentRect;
-  currentRect.origin = downPoint;
-  currentRect.size = currentRectSize;
-  
   [[NSColor whiteColor] set];
-  [[NSBezierPath bezierPathWithOvalInRect:currentRect] fill];
+  [[NSBezierPath bezierPathWithOvalInRect:[self currentRect]] fill];
   [[NSColor blueColor] set];
   NSEnumerator *rectEnumerator = [[owner ovals] objectEnumerator];
   NSValue *value = nil;
   while (value = [rectEnumerator nextObject]) {
+    NSLog(@"- drawRect:] retreived %@", value);
     [[NSBezierPath bezierPathWithOvalInRect:[value rectValue]] fill];
   }
 }
