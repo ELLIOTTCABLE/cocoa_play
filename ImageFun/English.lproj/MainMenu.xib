@@ -1125,10 +1125,10 @@
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSCustomView" id="68417179">
+						<object class="NSCustomView" id="753062587">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{20, 244}, {163, 96}}</string>
+							<string key="NSFrame">{{20, 20}, {440, 320}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<string key="NSClassName">NSView</string>
 						</object>
@@ -2260,7 +2260,7 @@
 						<reference key="object" ref="439893737"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="68417179"/>
+							<reference ref="753062587"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -2576,7 +2576,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">450</int>
-						<reference key="object" ref="68417179"/>
+						<reference key="object" ref="753062587"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 				</object>
