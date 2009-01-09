@@ -26,6 +26,7 @@
 - (void)mouseDragged:(NSEvent *)event {
   NSPoint p = [event locationInWindow];
   NSLog(@"- mouseDragged:%@]", NSStringFromPoint(p));
+  [self autoscroll:event];
 }
 
 - (void)mouseUp:(NSEvent *)event {
