@@ -10,6 +10,10 @@
 - (id)init {
   if (![super init])
     return nil;
+  
+  ovals = [[NSMutableSet setWithCapacity:25] retain];
+  NSLog(@"- init] created ovals: %@", ovals);
+  
   return self;
 }
 

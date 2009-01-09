@@ -46,6 +46,11 @@
   newRect.origin = downPoint;
   newRect.size = newRectSize;
   
+  NSValue *rectAsValue = [NSValue valueWithRect:newRect];
+  NSLog(@"- mouseUp:%@] preparing to add %@", NSStringFromPoint(upPoint), rectAsValue);
+  [[owner ovals] addObject:[rectAsValue retain]];
+  NSLog(@"- mouseUp:%@] added %@ to %@", NSStringFromPoint(upPoint), rectAsValue, [owner ovals]);
+  
   // Set the two points the same, to ensure an extra 'rectangle' isn't drawn
   currentPoint = downPoint;
   [self setNeedsDisplay:YES];
@@ -63,7 +68,13 @@
   currentRect.size = currentRectSize;
   
   [[NSColor whiteColor] set];
-  [[NSBezierPath bezierPathWithOvalInRect:currentRect] stroke];
+  [[NSBezierPath bezierPathWithOvalInRect:currentRect] fill];
+  [[NSColor blueColor] set];
+  NSEnumerator *rectEnumerator = [[owner ovals] objectEnumerator];
+  NSValue *value = nil;
+  while (value = [rectEnumerator nextObject]) {
+    [[NSBezierPath bezierPathWithOvalInRect:[value rectValue]] fill];
+  }
 }
 
 @end
