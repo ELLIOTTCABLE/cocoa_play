@@ -1760,6 +1760,14 @@
 					</object>
 					<int key="connectionID">449</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">stretchView</string>
+						<reference key="source" ref="938134162"/>
+						<reference key="destination" ref="201560844"/>
+					</object>
+					<int key="connectionID">458</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -2899,6 +2907,9 @@
 					<string>419.IBPluginDependency</string>
 					<string>420.IBPluginDependency</string>
 					<string>450.IBPluginDependency</string>
+					<string>451.IBPluginDependency</string>
+					<string>452.IBPluginDependency</string>
+					<string>453.IBPluginDependency</string>
 					<string>455.IBPluginDependency</string>
 					<string>456.IBPluginDependency</string>
 					<string>457.IBPluginDependency</string>
@@ -3131,6 +3142,9 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="9"/>
@@ -3187,7 +3201,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">457</int>
+			<int key="maxID">458</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
