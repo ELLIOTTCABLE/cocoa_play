@@ -54,6 +54,21 @@
   [path fill];
 }
 
+#pragma mark Events
+
+- (void)mouseDown:(NSEvent *)event {
+  NSLog(@"mouseDown: %d", [event clickCount]);
+}
+
+- (void)mouseDragged:(NSEvent *)event {
+  NSPoint p = [event locationInWindow];
+  NSLog(@"mouseDragged:%@", NSStringFromPoint(p));
+}
+
+- (void)mouseUp:(NSEvent *)event {
+  NSLog(@"mouseUp:");
+}
+
 #pragma mark Closing remarks
 
 - (void)dealloc {
