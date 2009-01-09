@@ -89,15 +89,24 @@
 
 - (void)mouseDown:(NSEvent *)event {
   NSLog(@"mouseDown: %d", [event clickCount]);
+  NSPoint p = [event locationInWindow];
+  downPoint = [self convertPoint:p fromView:nil];
+  currentPoint = downPoint;
+  [self setNeedsDisplay:YES];
 }
 
 - (void)mouseDragged:(NSEvent *)event {
   NSPoint p = [event locationInWindow];
   NSLog(@"mouseDragged:%@", NSStringFromPoint(p));
+  currentPoint = [self convertPoint:p fromView:nil];
+  [self setNeedsDisplay:YES];
 }
 
 - (void)mouseUp:(NSEvent *)event {
   NSLog(@"mouseUp:");
+  NSPoint p = [event locationInWindow];
+  currentPoint = [self convertPoint:p fromView:nil];
+  [self setNeedsDisplay:YES];
 }
 
 #pragma mark Closing remarks
