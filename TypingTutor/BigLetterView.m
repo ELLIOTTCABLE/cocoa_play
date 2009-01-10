@@ -141,16 +141,19 @@
 #pragma mark ===== Paste bored. ==
 
 - (IBAction)cut:(id)sender {
+  NSLog(@"@BigLetterView - cut:]");
   [self copy:sender];
   [self setString:@""];
 }
 
 - (IBAction)copy:(id)sender {
+  NSLog(@"@BigLetterView - copy:]");
   NSPasteboard *pb = [NSPasteboard generalPasteboard];
   [self writeToPasteboard:pb];
 }
 
 - (IBAction)paste:(id)sender {
+  NSLog(@"@BigLetterView - paste:]");
   NSPasteboard *pb = [NSPasteboard generalPasteboard];
   NSString *value = [self readFromPasteboard:pb];
   if ([value length] != 1) {
@@ -161,12 +164,22 @@
 }
 
 - (void)writeToPasteboard:(NSPasteboard *)pb {
-  NSString *type = NSStringPboardType;
-  [pb declareTypes:[NSArray arrayWithObject:type] owner:self];
-  [pb setString:string forType:type];
+  NSLog(@"@BigLetterView - writeToPasteboard:]");
+  NSString *stringType = [NSStringPboardType retain];
+  NSString *PDFType = [NSPDFPboardType retain];
+  // For whatever reason, I always get tons of errors if I try to create a normal NSArray with +arrayWithObjects:... so doing it the round-about way.
+  NSMutableArray *types = [[NSMutableArray arrayWithCapacity:2] retain];
+  [types addObject:stringType];
+  [types addObject:PDFType];
+  [pb declareTypes:types owner:self];
+  [pb setString:string forType:stringType];
+  NSRect r = [self bounds];
+  NSData *data = [self dataWithPDFInsideRect:r];
+  [pb setData:data forType:PDFType];
 }
 
 - (NSString *)readFromPasteboard:(NSPasteboard *)pb {
+  NSLog(@"@BigLetterView - readFromPasteboard:]");
   NSString *type = NSStringPboardType;
   if ([[pb types] containsObject:type])
     return [pb stringForType:type];
