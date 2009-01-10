@@ -41,6 +41,7 @@
 
 #pragma mark ===== Dwawing ==
 
+- (BOOL)isOpaque { return YES; }
 - (void)drawRect:(NSRect)rect {
   NSLog(@"@BigLetterView - drawRect:]");
   NSRect bounds = [self bounds];
