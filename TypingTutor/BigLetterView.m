@@ -7,15 +7,51 @@
 
 @implementation BigLetterView
 
-- (id)initWithFrame:(NSRect)frame {
+#pragma mark ===== What's up in this mug? ==
+
+- (id)initWithFrame:(NSRect)rect {
   NSLog(@"@BigLetterView - initWithFrame:]");
-  if (![super initWithFrame:frame])
+  if (![super initWithFrame:rect])
     return nil;
+  
+  bgColor = [[NSColor yellowColor] retain];
+  string = @" ";
+  
   return self;
 }
 
+#pragma mark ===== i r an accessarz ==
+
+- (NSColor *)bgColor { return bgColor; }
+- (void)setBgColor:(NSColor *)c {
+  NSLog(@"@BigLetterView - setBgColor:%@]", c);
+  [c retain];
+  [bgColor release];
+  bgColor = c;
+  [self setNeedsDisplay:YES];
+}
+
+- (NSString *)string { return string; }
+- (void)setString:(NSString *)s {
+  NSLog(@"@BigLetterView - setString:%@]", s);
+  s = [s copy];
+  [string release];
+  string = s;
+}
+
+#pragma mark ===== Dwawing ==
+
 - (void)drawRect:(NSRect)rect {
   NSLog(@"@BigLetterView - drawRect:]");
+}
+
+#pragma mark ===== Aww, it's been fun )-: ==
+
+- (void)dealloc {
+  NSLog(@"@BigLetterView - dealloc]");
+  [bgColor release];
+  [string release];
+  [super dealloc];
 }
 
 @end
