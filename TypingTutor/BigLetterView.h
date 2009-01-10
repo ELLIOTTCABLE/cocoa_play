@@ -14,4 +14,5 @@
 @property (copy, readwrite) NSString *string;
 - (void)prepareAttributes;
 - (void)drawStringCenteredIn:(NSRect)r;
+- (IBAction)savePDF:(id)sender;
 @end

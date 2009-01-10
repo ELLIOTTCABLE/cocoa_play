@@ -106,6 +106,38 @@
 - (void)insertBacktab:(id)sender { [[self window] selectKeyViewPrecedingView:self]; }
 - (void)deleteBackward:(id)sender { [self setString:@" "]; }
 
+#pragma mark ===== Portable Retarded Format, more like it ==
+
+- (IBAction)savePDF:(id)sender {
+  NSSavePanel *panel = [NSSavePanel savePanel];
+  [panel setRequiredFileType:@"pdf"];
+  [panel beginSheetForDirectory:nil
+                           file:nil
+                 modalForWindow:[self window]
+                  modalDelegate:self
+                 didEndSelector:@selector(didEnd:returnCode:contextInfo:)
+                    contextInfo:NULL];
+}
+
+- (void)didEnd:(NSSavePanel *)sheet
+    returnCode:(int)code
+   contextInfo:(void *)contextInfo {
+  if (code != NSOKButton)
+    return;
+  
+  NSRect r = [self bounds];
+  NSData *data = [self dataWithPDFInsideRect:r];
+  NSString *path = [sheet filename];
+  NSError *error;
+  BOOL successful = [data writeToFile:path
+                              options:0
+                                error:&error];
+  if (!successful) {
+    NSAlert *a = [NSAlert alertWithError:error];
+    [a runModal];
+  }
+}
+
 #pragma mark ===== Aww, it's been fun )-: ==
 
 - (void)dealloc {
