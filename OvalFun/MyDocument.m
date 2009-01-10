@@ -29,10 +29,24 @@
 
 - (void)addOvalsObject:(NSValue *)aValue {
   NSLog(@"- addOvalsObject:%@]", aValue);
+  
+  NSUndoManager *undo = [self undoManager];
+  [[undo prepareWithInvocationTarget:self] removeOvalsObject:aValue];
+  if (![undo isUndoing]) {
+    [undo setActionName:@"Create Oval"];
+  }
+  
   [ovals addObject:aValue];
 }
 - (void)removeOvalsObject:(NSValue *)aValue {
   NSLog(@"- removeOvalsObject:%@]", aValue);
+  
+  NSUndoManager *undo = [self undoManager];
+  [[undo prepareWithInvocationTarget:self] addOvalsObject:aValue];
+  if (![undo isUndoing]) {
+    [undo setActionName:@"Remove Oval"];
+  }
+  
   [ovals removeObject:aValue];
 }
 
