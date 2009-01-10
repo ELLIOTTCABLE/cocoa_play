@@ -4,6 +4,7 @@
 //
 
 #import "BigLetterView.h"
+#import "FirstLetter.h"
 
 @implementation BigLetterView
 
@@ -156,11 +157,7 @@
   NSLog(@"@BigLetterView - paste:]");
   NSPasteboard *pb = [NSPasteboard generalPasteboard];
   NSString *value = [self readFromPasteboard:pb];
-  if ([value length] != 1) {
-	NSBeep();
-    return;
-  }
-  [self setString:value];
+  [self setString:[value YR_firstLetter]];
 }
 
 - (void)writeToPasteboard:(NSPasteboard *)pb {
