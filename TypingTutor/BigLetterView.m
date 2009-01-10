@@ -138,6 +138,22 @@
 - (void)insertBacktab:(id)sender { [[self window] selectKeyViewPrecedingView:self]; }
 - (void)deleteBackward:(id)sender { [self setString:@" "]; }
 
+#pragma mark ===== Paste bored. ==
+
+- (void)writeToPasteboard:(NSPasteboard *)pb {
+  NSString *type = NSStringPboardType;
+  [pb declareTypes:[NSArray arrayWithObject:type] owner:self];
+  [pb setString:string forType:type];
+}
+
+- (NSString *)readFromPasteboard:(NSPasteboard *)pb {
+  NSString *type = NSStringPboardType;
+  if ([[pb types] containsObject:type])
+    return [pb stringForType:type];
+  return nil;
+}
+
+
 #pragma mark ===== Portable Retarded Format, more like it ==
 
 - (IBAction)savePDF:(id)sender {
