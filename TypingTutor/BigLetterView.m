@@ -59,6 +59,7 @@
   NSRect bounds = [self bounds];
   [bgColor set];
   [NSBezierPath fillRect:bounds];
+  [self drawStringCenteredIn:bounds];
   
   // Am I the window's first responder?
   if (([[self window] firstResponder] == self) && [NSGraphicsContext currentContextDrawingToScreen]) {
@@ -67,6 +68,14 @@
     [NSBezierPath fillRect:bounds];
     [NSGraphicsContext restoreGraphicsState];
   }
+}
+
+- (void)drawStringCenteredIn:(NSRect)r {
+  NSSize strSize = [string sizeWithAttributes:attributes];
+  NSPoint strOrigin;
+  strOrigin.x = r.origin.x + (r.size.width - strSize.width)/2;
+  strOrigin.y = r.origin.y + (r.size.height - strSize.height)/2;
+  [string drawAtPoint:strOrigin withAttributes:attributes];
 }
 
 #pragma mark ===== It's kinda like the first lady, but not. ==

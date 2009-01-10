@@ -13,4 +13,5 @@
 @property (retain, readwrite) NSColor *bgColor;
 @property (copy, readwrite) NSString *string;
 - (void)prepareAttributes;
+- (void)drawStringCenteredIn:(NSRect)r;
 @end
