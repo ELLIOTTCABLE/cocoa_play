@@ -17,6 +17,8 @@
   bgColor = [[NSColor yellowColor] retain];
   string = @" ";
   [self prepareAttributes];
+  bold = NO;
+  italic = NO;
   
   return self;
 }
@@ -57,6 +59,19 @@
   [shadow setShadowOffset:offset];
   [attributes setObject:shadow
                  forKey:NSShadowAttributeName];
+}
+
+- (BOOL)italic { return italic; }
+- (void)setItalic:(BOOL)i {
+  NSLog(@"@BigLetterView - setItalic:%d]", i);
+  italic = i;
+  [self setNeedsDisplay:YES];
+}
+- (BOOL)bold { return bold; }
+- (void)setBold:(BOOL)b {
+  NSLog(@"@BigLetterView - setBold:%d]", b);
+  bold = b;
+  [self setNeedsDisplay:YES];
 }
 
 #pragma mark ===== Dwawing ==
