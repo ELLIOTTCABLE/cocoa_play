@@ -46,7 +46,12 @@
 - (void)prepareAttributes {
   attributes = [[NSMutableDictionary alloc] init];
   
-  [attributes setObject:[NSFont fontWithName:@"Helvetica" size:75]
+  NSFont *font = [NSFont fontWithName:@"Helvetica" size:75];
+  NSFontManager *fontManager = [NSFontManager sharedFontManager];
+  if (italic) font = [fontManager convertFont:font toHaveTrait:NSItalicFontMask];
+  if (bold) font = [fontManager convertFont:font toHaveTrait:NSBoldFontMask];
+  
+  [attributes setObject:font
                  forKey:NSFontAttributeName];
   
   [attributes setObject:[NSColor redColor]
@@ -59,13 +64,14 @@
   [shadow setShadowOffset:offset];
   [attributes setObject:shadow
                  forKey:NSShadowAttributeName];
+  [self setNeedsDisplay:YES];
 }
 
 - (BOOL)italic { return italic; }
 - (void)setItalic:(BOOL)i {
   NSLog(@"@BigLetterView - setItalic:%d]", i);
   italic = i;
-  [self setNeedsDisplay:YES];
+  [self prepareAttributes];
 }
 - (IBAction)toggleItalic:(id)sender { [self setItalic:![self italic]]; }
 
@@ -73,7 +79,7 @@
 - (void)setBold:(BOOL)b {
   NSLog(@"@BigLetterView - setBold:%d]", b);
   bold = b;
-  [self setNeedsDisplay:YES];
+  [self prepareAttributes];
 }
 - (IBAction)toggleBold:(id)sender { [self setBold:![self bold]]; }
 
