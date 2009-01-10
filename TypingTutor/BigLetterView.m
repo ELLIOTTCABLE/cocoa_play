@@ -43,6 +43,9 @@
 
 - (void)drawRect:(NSRect)rect {
   NSLog(@"@BigLetterView - drawRect:]");
+  NSRect bounds = [self bounds];
+  [bgColor set];
+  [NSBezierPath fillRect:bounds];
 }
 
 #pragma mark ===== Aww, it's been fun )-: ==
