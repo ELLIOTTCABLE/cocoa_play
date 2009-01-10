@@ -56,6 +56,25 @@
   }
 }
 
+#pragma mark ===== It's kinda like the first lady, but not. ==
+
+- (BOOL)acceptsFirstResponder {
+  NSLog(@"@BigLetterView - acceptsFirstResponder]");
+  return YES;
+}
+
+- (BOOL)resignFirstResponder {
+  NSLog(@"@BigLetterView - resignFirstResponder]");
+  [self setNeedsDisplay:YES];
+  return YES;
+}
+
+- (BOOL)becomeFirstResponder {
+  NSLog(@"@BigLetterView - becomeFirstResponder]");
+  [self setNeedsDisplay:YES];
+  return YES;
+}
+
 #pragma mark ===== Aww, it's been fun )-: ==
 
 - (void)dealloc {
