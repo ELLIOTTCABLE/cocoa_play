@@ -49,6 +49,14 @@
   
   [attributes setObject:[NSColor redColor]
                  forKey:NSForegroundColorAttributeName];
+  NSShadow *shadow = [[NSShadow alloc] init];
+  [shadow setShadowBlurRadius:5.0];
+  NSSize offset;
+  offset.width = 4;
+  offset.height = -4;
+  [shadow setShadowOffset:offset];
+  [attributes setObject:shadow
+                 forKey:NSShadowAttributeName];
 }
 
 #pragma mark ===== Dwawing ==
