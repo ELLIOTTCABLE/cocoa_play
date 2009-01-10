@@ -67,12 +67,15 @@
   italic = i;
   [self setNeedsDisplay:YES];
 }
+- (IBAction)toggleItalic:(id)sender { [self setItalic:![self italic]]; }
+
 - (BOOL)bold { return bold; }
 - (void)setBold:(BOOL)b {
   NSLog(@"@BigLetterView - setBold:%d]", b);
   bold = b;
   [self setNeedsDisplay:YES];
 }
+- (IBAction)toggleBold:(id)sender { [self setBold:![self bold]]; }
 
 #pragma mark ===== Dwawing ==
 
