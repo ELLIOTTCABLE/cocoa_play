@@ -47,6 +47,13 @@
   NSRect bounds = [self bounds];
   [bgColor set];
   [NSBezierPath fillRect:bounds];
+  
+  // Am I the window's first responder?
+  if ([[self window] firstResponder] == self) {
+    [[NSColor keyboardFocusIndicatorColor] set];
+    [NSBezierPath setDefaultLineWidth:4.0];
+    [NSBezierPath strokeRect:bounds];
+  }
 }
 
 #pragma mark ===== Aww, it's been fun )-: ==
