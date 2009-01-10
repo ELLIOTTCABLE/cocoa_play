@@ -16,6 +16,7 @@
   
   bgColor = [[NSColor yellowColor] retain];
   string = @" ";
+  [self prepareAttributes];
   
   return self;
 }
@@ -37,6 +38,17 @@
   s = [s copy];
   [string release];
   string = s;
+  [self setNeedsDisplay:YES];
+}
+
+- (void)prepareAttributes {
+  attributes = [[NSMutableDictionary alloc] init];
+  
+  [attributes setObject:[NSFont fontWithName:@"Helvetica" size:75]
+                 forKey:NSFontAttributeName];
+  
+  [attributes setObject:[NSColor redColor]
+                 forKey:NSForegroundColorAttributeName];
 }
 
 #pragma mark ===== Dwawing ==
@@ -91,6 +103,7 @@
   NSLog(@"@BigLetterView - dealloc]");
   [bgColor release];
   [string release];
+  [attributes release];
   [super dealloc];
 }
 
