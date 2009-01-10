@@ -1125,12 +1125,12 @@
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSCustomView" id="480663448">
+						<object class="NSCustomView" id="640174454">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{20, 20}, {440, 320}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<string key="NSClassName">NSView</string>
+							<string key="NSClassName">BigLetterView</string>
 						</object>
 					</object>
 					<string key="NSFrameSize">{480, 360}</string>
@@ -2260,7 +2260,7 @@
 						<reference key="object" ref="439893737"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="480663448"/>
+							<reference ref="640174454"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -2576,7 +2576,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">450</int>
-						<reference key="object" ref="480663448"/>
+						<reference key="object" ref="640174454"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 				</object>
@@ -3056,7 +3056,19 @@
 			<nil key="sourceID"/>
 			<int key="maxID">450</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">BigLetterView</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">BigLetterView.h</string>
+					</object>
+				</object>
+			</object>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.LastKnownRelativeProjectPath">../TypingTutor.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
