@@ -22,6 +22,9 @@
 - (IBAction)toggleBold:(id)sender;
 - (void)prepareAttributes;
 - (void)drawStringCenteredIn:(NSRect)r;
+- (IBAction)cut:(id)sender;
+- (IBAction)copy:(id)sender;
+- (IBAction)paste:(id)sender;
 - (void)writeToPasteboard:(NSPasteboard *)pb;
 - (NSString *)readFromPasteboard:(NSPasteboard *)pb;
 - (IBAction)savePDF:(id)sender;

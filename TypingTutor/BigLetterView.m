@@ -140,6 +140,26 @@
 
 #pragma mark ===== Paste bored. ==
 
+- (IBAction)cut:(id)sender {
+  [self copy:sender];
+  [self setString:@""];
+}
+
+- (IBAction)copy:(id)sender {
+  NSPasteboard *pb = [NSPasteboard generalPasteboard];
+  [self writeToPasteboard:pb];
+}
+
+- (IBAction)paste:(id)sender {
+  NSPasteboard *pb = [NSPasteboard generalPasteboard];
+  NSString *value = [self readFromPasteboard:pb];
+  if ([value length] != 1) {
+	NSBeep();
+    return;
+  }
+  [self setString:value];
+}
+
 - (void)writeToPasteboard:(NSPasteboard *)pb {
   NSString *type = NSStringPboardType;
   [pb declareTypes:[NSArray arrayWithObject:type] owner:self];
@@ -152,7 +172,6 @@
     return [pb stringForType:type];
   return nil;
 }
-
 
 #pragma mark ===== Portable Retarded Format, more like it ==
 
