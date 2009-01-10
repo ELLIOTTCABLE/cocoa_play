@@ -49,10 +49,11 @@
   [NSBezierPath fillRect:bounds];
   
   // Am I the window's first responder?
-  if ([[self window] firstResponder] == self) {
-    [[NSColor keyboardFocusIndicatorColor] set];
-    [NSBezierPath setDefaultLineWidth:4.0];
-    [NSBezierPath strokeRect:bounds];
+  if (([[self window] firstResponder] == self) && [NSGraphicsContext currentContextDrawingToScreen]) {
+    [NSGraphicsContext saveGraphicsState];
+    NSSetFocusRingStyle(NSFocusRingOnly);
+    [NSBezierPath fillRect:bounds];
+    [NSGraphicsContext restoreGraphicsState];
   }
 }
 
@@ -65,7 +66,7 @@
 
 - (BOOL)resignFirstResponder {
   NSLog(@"@BigLetterView - resignFirstResponder]");
-  [self setNeedsDisplay:YES];
+  [self setKeyboardFocusRingNeedsDisplayInRect:[self bounds]];
   return YES;
 }
 
