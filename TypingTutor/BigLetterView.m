@@ -75,6 +75,15 @@
   return YES;
 }
 
+#pragma mark ===== Clickity-clack ==
+
+- (void)keyDown:(NSEvent *)event { [self interpretKeyEvents:[NSArray arrayWithObject:event]]; }
+- (void)insertText:(NSString *)input { [self setString:input]; }
+
+- (void)insertTab:(id)sender { [[self window] selectKeyViewFollowingView:self]; }
+- (void)insertBacktab:(id)sender { [[self window] selectKeyViewPrecedingView:self]; }
+- (void)deleteBackward:(id)sender { [self setString:@" "]; }
+
 #pragma mark ===== Aww, it's been fun )-: ==
 
 - (void)dealloc {
