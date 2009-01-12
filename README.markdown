@@ -39,7 +39,7 @@ this project, about XIB files and how to git-version them safely/cleanly. If
 you're at all considering working on a Cocoa project and storing that project
 in a source control repository, you really should read it:
 
-<http://blog.elliottcable.name/git_versioning_interface_builder_s_xib_files.xhtml>
+<http://blog.elliottcable.name/posts/git_versioning_interface_builder_s_xib_files.xhtml>
 
 On a related note, I occasionally make *extremely* granular commit streams to
 this repository, going through a save/police/interactive-stage/commit process
