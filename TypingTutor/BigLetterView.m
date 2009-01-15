@@ -219,6 +219,41 @@
   [anImage release];
 }
 
+- (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
+  NSLog(@"@BigLetterView -draggingEntered:]");
+  if ([sender draggingSource] == self) {
+    return NSDragOperationNone;
+  }
+  
+  highlighted = YES;
+  [self setNeedsDisplay:YES];
+  return NSDragOperationCopy;
+}
+- (void)draggingExited:(id <NSDraggingInfo>)sender {
+  NSLog(@"@BigLetterView -draggingExited:]");
+  highlighted = NO;
+  [self setNeedsDisplay:YES];
+}
+
+- (BOOL)prepareForDragOperation:(id <NSDraggingInfo>)sender { return YES; }
+
+- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
+  NSPasteboard *pb = [sender draggingPasteboard];
+  NSString *value = [self readFromPasteboard:pb];
+  if(!value) {
+    NSLog(@"Error: Could not read from dragging pasteboard");
+    return NO;
+  }
+  [self setString:value];
+  return YES;
+}
+
+- (void)concludeDragOperation:(id <NSDraggingInfo>)sender {
+  NSLog(@"@BigLetterView -concludeDragOperation:]");
+  highlighted = NO;
+  [self setNeedsDisplay:YES];
+}
+
 #pragma mark ===== Paste bored. ==
 
 - (IBAction)cut:(id)sender {
