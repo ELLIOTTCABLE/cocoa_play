@@ -19,6 +19,7 @@
   [self prepareAttributes];
   bold = NO;
   italic = NO;
+  [self registerForDraggedTypes:[NSArray arrayWithObject:NSStringPboardType]];
   
   return self;
 }
