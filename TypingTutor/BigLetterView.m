@@ -254,6 +254,16 @@
   [self setNeedsDisplay:YES];
 }
 
+- (NSDragOperation)draggingUpdated:(id <NSDraggingInfo>)sender {
+  NSLog(@"@BigLetterView -draggingUpdated:]");
+  NSDragOperation op = [sender draggingSourceOperationMask];
+  NSLog(@"@BigLetterView -draggingUpdated:] operation mask == %d", op);
+  NSLog(@"operation mask = %d", op);
+  if ([sender draggingSource] == self)
+    return NSDragOperationNone;
+  return NSDragOperationCopy;
+}
+
 #pragma mark ===== Paste bored. ==
 
 - (IBAction)cut:(id)sender {
