@@ -90,8 +90,15 @@
 - (void)drawRect:(NSRect)rect {
   NSLog(@"@BigLetterView - drawRect:]");
   NSRect bounds = [self bounds];
-  [bgColor set];
-  [NSBezierPath fillRect:bounds];
+  if (highlighted) {
+    NSGradient *gr;
+    gr = [[NSGradient alloc] initWithStartingColor:[NSColor whiteColor] endingColor:bgColor];
+    [gr drawInRect:bounds relativeCenterPosition:NSZeroPoint];
+    [gr release];
+  } else {
+    [bgColor set];
+    [NSBezierPath fillRect:bounds];
+  }
   [self drawStringCenteredIn:bounds];
   
   // Am I the window's first responder?
@@ -138,6 +145,8 @@
 - (void)insertTab:(id)sender { [[self window] selectKeyViewFollowingView:self]; }
 - (void)insertBacktab:(id)sender { [[self window] selectKeyViewPrecedingView:self]; }
 - (void)deleteBackward:(id)sender { [self setString:@" "]; }
+
+#pragma mark ===== It drags the thingie to the other thingie ==
 
 - (NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal {
   return NSDragOperationCopy | NSDragOperationDelete;
