@@ -139,7 +139,15 @@
 - (void)deleteBackward:(id)sender { [self setString:@" "]; }
 
 - (NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal {
-  return NSDragOperationCopy;
+  return NSDragOperationCopy | NSDragOperationDelete;
+}
+
+- (void)draggedImage:(NSImage *)image
+             endedAt:(NSPoint)screenPoint
+           operation:(NSDragOperation)operation {
+  if (operation == NSDragOperationDelete) {
+    [self setString:@""];
+  }
 }
 
 - (void)mouseDown:(NSEvent *)event {
