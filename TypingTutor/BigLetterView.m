@@ -142,6 +142,12 @@
   return NSDragOperationCopy;
 }
 
+- (void)mouseDown:(NSEvent *)event {
+  [event retain];
+  [lastMouseDownEvent release];
+  lastMouseDownEvent = event;
+}
+
 #pragma mark ===== Paste bored. ==
 
 - (IBAction)cut:(id)sender {

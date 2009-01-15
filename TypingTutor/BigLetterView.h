@@ -11,6 +11,7 @@
   BOOL bold;
   BOOL italic;
   NSMutableDictionary *attributes;
+  NSEvent *lastMouseDownEvent;
 }
 @property (retain, readwrite) NSColor *bgColor;
 @property (copy, readwrite) NSString *string;
