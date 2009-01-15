@@ -148,6 +148,59 @@
   lastMouseDownEvent = event;
 }
 
+- (void)mouseDragged:(NSEvent *)event {
+  NSPoint down = [lastMouseDownEvent locationInWindow];
+  NSPoint drag = [event locationInWindow];
+  float distance = hypot(down.x - drag.x, down.y - drag.y);
+  if (distance < 3) {
+    return;
+  }
+  
+  // Is the string of zero length?
+  if ([string length] == 0) {
+    return;
+  }
+  
+  // Get the size of the string
+  NSSize s = [string sizeWithAttributes:attributes];
+  
+  // Create the image that will be dragged
+  NSImage *anImage = [[NSImage alloc] initWithSize:s];
+  // Create a rect in which you will draw the letter
+  // in the image
+  NSRect imageBounds;
+  imageBounds.origin = NSZeroPoint;
+  imageBounds.size = s;
+  
+  // Draw the letter on the image
+  [anImage lockFocus];
+  [self drawStringCenteredIn:imageBounds];
+  [anImage unlockFocus];
+  
+  // Get the location of the mouseDown event
+  NSPoint p = [self convertPoint:down fromView:nil];
+  
+  // Drag from the center of the image
+  p.x = p.x - s.width/2;
+  p.y = p.y - s.height/2;
+  
+  // Get the pasteboard
+  NSPasteboard *pb = [NSPasteboard pasteboardWithName:NSDragPboard];
+  
+  // Put the string on the pasteboard
+  [self writeToPasteboard:pb];
+  
+  // Start the drag
+  [self dragImage:anImage
+               at:p
+           offset:NSMakeSize(0, 0)
+            event:lastMouseDownEvent
+       pasteboard:pb
+           source:self
+        slideBack:YES];
+  [anImage release];
+}
+
 #pragma mark ===== Paste bored. ==
 
 - (IBAction)cut:(id)sender {
