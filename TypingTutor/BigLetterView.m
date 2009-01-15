@@ -138,6 +138,10 @@
 - (void)insertBacktab:(id)sender { [[self window] selectKeyViewPrecedingView:self]; }
 - (void)deleteBackward:(id)sender { [self setString:@" "]; }
 
+- (NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal {
+  return NSDragOperationCopy;
+}
+
 #pragma mark ===== Paste bored. ==
 
 - (IBAction)cut:(id)sender {
